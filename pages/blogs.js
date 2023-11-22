@@ -94,7 +94,8 @@ const getPopulatedData = async ({ attributes, relationships }, included) => {
         body,
         field_comments,
         field_summary,
-        field_author_name
+        field_author_name,
+        field_reading_time
     } = attributes
 
 
@@ -226,7 +227,7 @@ const getPopulatedData = async ({ attributes, relationships }, included) => {
                 "commissioned": false,
                 "review_date": new Date(changed).toISOString().split('T')[0],
                 "created_date": new Date(created).toISOString().split('T')[0],
-                "time_to_read": `${calculateReadingTime(body.value)}-min read`,
+                "time_to_read": (field_reading_time || `${calculateReadingTime(body.value)}`) + '-min read',
                 "featured_image": null,
                 "introduction_text": field_summary,
                 "introduction_style": "standard"

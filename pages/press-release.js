@@ -99,7 +99,8 @@ const getPopulatedData = async ({ attributes, relationships }) => {
         field_review_exclude,
         field_scheduled_publish,
         field_subtitle,
-        field_summary
+        field_summary,
+        field_reading_time
     } = attributes
 
     const {field_slices, field_health_topics} = relationships
@@ -152,7 +153,7 @@ const getPopulatedData = async ({ attributes, relationships }) => {
                 "commissioned": false,
                 "review_date": typeof changed === 'string' ? new Date(changed).toISOString().split('T')[0] : new Date(changed*1000).toISOString().split('T')[0],
                 "created_date": typeof created === 'string' ? new Date(created).toISOString().split('T')[0] : new Date(created*1000).toISOString().split('T')[0],
-                "time_to_read": `${calculateReadingTime(body.value)}-min read`,
+                "time_to_read": (field_reading_time || `${calculateReadingTime(body.value)}`) + '-min read',
                 "featured_image": null,
                 "introduction_text": field_summary,
                 "introduction_style": "standard"
