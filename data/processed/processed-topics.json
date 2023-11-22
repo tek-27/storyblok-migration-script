@@ -1,0 +1,686 @@
+{
+  "7829": {
+    "title": [
+      {
+        "value": "Commissioning and contracting"
+      }
+    ],
+    "moderation_state": [
+      {
+        "value": "published"
+      }
+    ]
+  },
+  "7830": {
+    "title": [
+      {
+        "value": "Competition, markets and choice"
+      }
+    ],
+    "moderation_state": [
+      {
+        "value": "published"
+      }
+    ]
+  },
+  "7831": {
+    "title": [
+      {
+        "value": "Governance and regulation"
+      }
+    ],
+    "moderation_state": [
+      {
+        "value": "published"
+      }
+    ]
+  },
+  "7832": {
+    "title": [
+      {
+        "value": "Public health"
+      }
+    ],
+    "moderation_state": [
+      {
+        "value": "published"
+      }
+    ]
+  },
+  "7834": {
+    "title": [
+      {
+        "value": "Integrated care"
+      }
+    ],
+    "moderation_state": [
+      {
+        "value": "published"
+      }
+    ]
+  },
+  "7835": {
+    "title": [
+      {
+        "value": "Organisational culture"
+      }
+    ],
+    "moderation_state": [
+      {
+        "value": "published"
+      }
+    ]
+  },
+  "7836": {
+    "title": [
+      {
+        "value": "Mental health"
+      }
+    ],
+    "moderation_state": [
+      {
+        "value": "published"
+      }
+    ]
+  },
+  "7838": {
+    "title": [
+      {
+        "value": "Patient experience"
+      }
+    ],
+    "moderation_state": [
+      {
+        "value": "published"
+      }
+    ]
+  },
+  "7839": {
+    "title": [
+      {
+        "value": "General practice"
+      }
+    ],
+    "moderation_state": [
+      {
+        "value": "published"
+      }
+    ]
+  },
+  "7840": {
+    "title": [
+      {
+        "value": "NHS finances"
+      }
+    ],
+    "moderation_state": [
+      {
+        "value": "published"
+      }
+    ]
+  },
+  "7842": {
+    "title": [
+      {
+        "value": "Adult social care"
+      }
+    ],
+    "moderation_state": [
+      {
+        "value": "published"
+      }
+    ]
+  },
+  "7843": {
+    "title": [
+      {
+        "value": "Technology and data"
+      }
+    ],
+    "moderation_state": [
+      {
+        "value": "published"
+      }
+    ]
+  },
+  "7844": {
+    "title": [
+      {
+        "value": "Local service design"
+      }
+    ],
+    "moderation_state": [
+      {
+        "value": "published"
+      }
+    ]
+  },
+  "7845": {
+    "title": [
+      {
+        "value": "General election 2015"
+      }
+    ],
+    "moderation_state": [
+      {
+        "value": "published"
+      }
+    ]
+  },
+  "8109": {
+    "title": [
+      {
+        "value": "Community services"
+      }
+    ],
+    "moderation_state": [
+      {
+        "value": "published"
+      }
+    ]
+  },
+  "8110": {
+    "title": [
+      {
+        "value": "Emergency care"
+      }
+    ],
+    "moderation_state": [
+      {
+        "value": "published"
+      }
+    ]
+  },
+  "8111": {
+    "title": [
+      {
+        "value": "End-of-life care"
+      }
+    ],
+    "moderation_state": [
+      {
+        "value": "published"
+      }
+    ]
+  },
+  "8112": {
+    "title": [
+      {
+        "value": "Hospital care"
+      }
+    ],
+    "moderation_state": [
+      {
+        "value": "published"
+      }
+    ]
+  },
+  "8113": {
+    "title": [
+      {
+        "value": "Long-term conditions"
+      }
+    ],
+    "moderation_state": [
+      {
+        "value": "published"
+      }
+    ]
+  },
+  "8114": {
+    "title": [
+      {
+        "value": "Maternity services"
+      }
+    ],
+    "moderation_state": [
+      {
+        "value": "published"
+      }
+    ]
+  },
+  "8115": {
+    "title": [
+      {
+        "value": "Sexual health care"
+      }
+    ],
+    "moderation_state": [
+      {
+        "value": "published"
+      }
+    ]
+  },
+  "8117": {
+    "title": [
+      {
+        "value": "Clinical leadership"
+      }
+    ],
+    "moderation_state": [
+      {
+        "value": "published"
+      }
+    ]
+  },
+  "8118": {
+    "title": [
+      {
+        "value": "Equality and diversity"
+      }
+    ],
+    "moderation_state": [
+      {
+        "value": "published"
+      }
+    ]
+  },
+  "8120": {
+    "title": [
+      {
+        "value": "Health and Social Care Act 2012"
+      }
+    ],
+    "moderation_state": [
+      {
+        "value": "published"
+      }
+    ]
+  },
+  "8121": {
+    "title": [
+      {
+        "value": "Better Care Fund"
+      }
+    ],
+    "moderation_state": [
+      {
+        "value": "published"
+      }
+    ]
+  },
+  "8123": {
+    "title": [
+      {
+        "value": "Social care finances"
+      }
+    ],
+    "moderation_state": [
+      {
+        "value": "published"
+      }
+    ]
+  },
+  "8124": {
+    "title": [
+      {
+        "value": "Performance"
+      }
+    ],
+    "moderation_state": [
+      {
+        "value": "published"
+      }
+    ]
+  },
+  "8125": {
+    "title": [
+      {
+        "value": "Productivity"
+      }
+    ],
+    "moderation_state": [
+      {
+        "value": "published"
+      }
+    ]
+  },
+  "8126": {
+    "title": [
+      {
+        "value": "NHS five year forward view"
+      }
+    ],
+    "moderation_state": [
+      {
+        "value": "published"
+      }
+    ]
+  },
+  "8127": {
+    "title": [
+      {
+        "value": "Devolution"
+      }
+    ],
+    "moderation_state": [
+      {
+        "value": "published"
+      }
+    ]
+  },
+  "8128": {
+    "title": [
+      {
+        "value": "Brexit"
+      }
+    ],
+    "moderation_state": [
+      {
+        "value": "published"
+      }
+    ]
+  },
+  "8129": {
+    "title": [
+      {
+        "value": "Access to care"
+      }
+    ],
+    "moderation_state": [
+      {
+        "value": "published"
+      }
+    ]
+  },
+  "8131": {
+    "title": [
+      {
+        "value": "Volunteers"
+      }
+    ],
+    "moderation_state": [
+      {
+        "value": "published"
+      }
+    ]
+  },
+  "8132": {
+    "title": [
+      {
+        "value": "General election 2017"
+      }
+    ],
+    "moderation_state": [
+      {
+        "value": "published"
+      }
+    ]
+  },
+  "8133": {
+    "title": [
+      {
+        "value": "Patient safety"
+      }
+    ],
+    "moderation_state": [
+      {
+        "value": "published"
+      }
+    ]
+  },
+  "8134": {
+    "title": [
+      {
+        "value": "Patient involvement"
+      }
+    ],
+    "moderation_state": [
+      {
+        "value": "published"
+      }
+    ]
+  },
+  "8135": {
+    "title": [
+      {
+        "value": "Older people"
+      }
+    ],
+    "moderation_state": [
+      {
+        "value": "published"
+      }
+    ]
+  },
+  "8136": {
+    "title": [
+      {
+        "value": "Housing"
+      }
+    ],
+    "moderation_state": [
+      {
+        "value": "published"
+      }
+    ]
+  },
+  "8137": {
+    "title": [
+      {
+        "value": "Health inequalities"
+      }
+    ],
+    "moderation_state": [
+      {
+        "value": "published"
+      }
+    ]
+  },
+  "8138": {
+    "title": [
+      {
+        "value": "Children and young people"
+      }
+    ],
+    "moderation_state": [
+      {
+        "value": "published"
+      }
+    ]
+  },
+  "8139": {
+    "title": [
+      {
+        "value": "Carers"
+      }
+    ],
+    "moderation_state": [
+      {
+        "value": "published"
+      }
+    ]
+  },
+  "8141": {
+    "title": [
+      {
+        "value": "Health and wellbeing boards"
+      }
+    ],
+    "moderation_state": [
+      {
+        "value": "published"
+      }
+    ]
+  },
+  "8142": {
+    "title": [
+      {
+        "value": "Clinical commissioning groups"
+      }
+    ],
+    "moderation_state": [
+      {
+        "value": "published"
+      }
+    ]
+  },
+  "8143": {
+    "title": [
+      {
+        "value": "Workforce and skills"
+      }
+    ],
+    "moderation_state": [
+      {
+        "value": "published"
+      }
+    ]
+  },
+  "8144": {
+    "title": [
+      {
+        "value": "Voluntary and community sector"
+      }
+    ],
+    "moderation_state": [
+      {
+        "value": "published"
+      }
+    ]
+  },
+  "8145": {
+    "title": [
+      {
+        "value": "System leadership"
+      }
+    ],
+    "moderation_state": [
+      {
+        "value": "published"
+      }
+    ]
+  },
+  "8146": {
+    "title": [
+      {
+        "value": "Sustainability and transformation plans"
+      }
+    ],
+    "moderation_state": [
+      {
+        "value": "published"
+      }
+    ]
+  },
+  "8147": {
+    "title": [
+      {
+        "value": "Quality improvement"
+      }
+    ],
+    "moderation_state": [
+      {
+        "value": "published"
+      }
+    ]
+  },
+  "8148": {
+    "title": [
+      {
+        "value": "Patient leadership"
+      }
+    ],
+    "moderation_state": [
+      {
+        "value": "published"
+      }
+    ]
+  },
+  "8149": {
+    "title": [
+      {
+        "value": "New models of care"
+      }
+    ],
+    "moderation_state": [
+      {
+        "value": "published"
+      }
+    ]
+  },
+  "8150": {
+    "title": [
+      {
+        "value": "Cancer services"
+      }
+    ],
+    "moderation_state": [
+      {
+        "value": "published"
+      }
+    ]
+  },
+  "8217": {
+    "title": [
+      {
+        "value": "Public opinion"
+      }
+    ],
+    "moderation_state": [
+      {
+        "value": "published"
+      }
+    ]
+  },
+  "8385": {
+    "title": [
+      {
+        "value": "NHS long-term plan"
+      }
+    ],
+    "moderation_state": [
+      {
+        "value": "published"
+      }
+    ]
+  },
+  "8458": {
+    "title": [
+      {
+        "value": "Population health"
+      }
+    ],
+    "moderation_state": [
+      {
+        "value": "published"
+      }
+    ]
+  },
+  "8491": {
+    "title": [
+      {
+        "value": "General election 2019"
+      }
+    ],
+    "moderation_state": [
+      {
+        "value": "published"
+      }
+    ]
+  },
+  "8543": {
+    "title": [
+      {
+        "value": "Covid-19"
+      }
+    ],
+    "moderation_state": [
+      {
+        "value": "published"
+      }
+    ]
+  },
+  "8795": {
+    "title": [
+      {
+        "value": "Health and Care Act 2022"
+      }
+    ],
+    "moderation_state": [
+      {
+        "value": "published"
+      }
+    ]
+  }
+}
