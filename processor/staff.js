@@ -19,7 +19,8 @@ module.exports = async () => {
             field_last_name,
             field_last_review_date,
             drupal_internal__nid,
-            drupal_internal__mid
+            drupal_internal__mid,
+            field_meta_tags,
         } = attributes
 
         let image = null
@@ -72,7 +73,8 @@ module.exports = async () => {
                 moderation_state,
                 field_email,
                 field_first_name,
-                field_last_name
+                field_last_name,
+                field_meta_tags
             }
 
             staffHash.internalId[drupal_internal__nid] = {
@@ -84,7 +86,8 @@ module.exports = async () => {
                 moderation_state,
                 field_email,
                 field_first_name,
-                field_last_name
+                field_last_name,
+                field_meta_tags
             }
         }
     }

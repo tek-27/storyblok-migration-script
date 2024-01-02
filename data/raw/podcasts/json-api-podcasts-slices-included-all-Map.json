@@ -1,0 +1,876 @@
+{
+    "jsonapi": {
+        "version": "1.0",
+        "meta": {
+            "links": { "self": { "href": "http://jsonapi.org/format/1.0/" } }
+        }
+    },
+    "data": [
+        {
+            "type": "node--page",
+            "id": "64278506-aab8-4cbf-a052-df3294b5ccd3",
+            "links": {
+                "self": {
+                    "href": "http://localhost:8080/jsonapi/node/page/64278506-aab8-4cbf-a052-df3294b5ccd3?resourceVersion=id%3A207914"
+                }
+            },
+            "attributes": {
+                "drupal_internal__nid": 6184,
+                "drupal_internal__vid": 207914,
+                "langcode": "und",
+                "revision_timestamp": "2020-09-29T09:12:55+00:00",
+                "revision_log": null,
+                "status": true,
+                "title": "Map of technology and data in health and care",
+                "created": "2016-06-21T14:18:09+00:00",
+                "changed": "2021-12-06T17:26:27+00:00",
+                "promote": false,
+                "sticky": false,
+                "default_langcode": true,
+                "revision_translation_affected": true,
+                "moderation_state": "published",
+                "metatag": null,
+                "path": {
+                    "alias": "/audio-video/technology-data-case-studies-map",
+                    "pid": 32594,
+                    "langcode": "und"
+                },
+                "rh_action": "bundle_default",
+                "rh_redirect": null,
+                "rh_redirect_response": 301,
+                "rh_redirect_fallback_action": null,
+                "sae_exclude": false,
+                "body": {
+                    "value": "\u003Cp class=\u0022o-type-intro\u0022\u003EOur interactive map brings together case studies from across England, highlighting some of the places that are experimenting with and implementing new technologies to achieve better health outcomes or more efficient care.\u003C/p\u003E\r\n\r\n\u003Cp\u003EThis map is not a comprehensive listing of all such projects \u2013 it is limited to a selection of case studies featured in our publications and at our events, plus the NHS test bed sites set up to evaluate the real-world impact of new technologies.\u0026nbsp;\u003C/p\u003E\r\n\r\n\u003Cp\u003E\u003Ciframe frameborder=\u00220\u0022 height=\u0022800\u0022 src=\u0022https://uploads.knightlab.com/storymapjs/1df129622a2c41f359947da514bcf01f/map-of-technology-and-data-in-health-and-care/index.html\u0022 width=\u0022100%\u0022\u003E\u003C/iframe\u003E\u003C/p\u003E\r\n",
+                    "format": "full_html",
+                    "processed": "\u003Cp class=\u0022o-type-intro\u0022\u003EOur interactive map brings together case studies from across England, highlighting some of the places that are experimenting with and implementing new technologies to achieve better health outcomes or more efficient care.\u003C/p\u003E\n\n\u003Cp\u003EThis map is not a comprehensive listing of all such projects \u2013 it is limited to a selection of case studies featured in our publications and at our events, plus the NHS test bed sites set up to evaluate the real-world impact of new technologies.\u00a0\u003C/p\u003E\n\n\u003Cp\u003E\u003Ciframe frameborder=\u00220\u0022 height=\u0022800\u0022 src=\u0022https://uploads.knightlab.com/storymapjs/1df129622a2c41f359947da514bcf01f/map-of-technology-and-data-in-health-and-care/index.html\u0022 width=\u0022100%\u0022\u003E\u003C/iframe\u003E\u003C/p\u003E",
+                    "summary": ""
+                },
+                "field_author_name": [],
+                "field_code": null,
+                "field_comments": {
+                    "status": 2,
+                    "cid": 553149,
+                    "last_comment_timestamp": 1526314086,
+                    "last_comment_name": "Masum",
+                    "last_comment_uid": 0,
+                    "comment_count": 15
+                },
+                "field_content_owner": "Digital Team",
+                "field_introduction": null,
+                "field_jump_links_cta": null,
+                "field_jump_link_label": null,
+                "field_last_review_date": "2017-11-01",
+                "field_meta_tags": null,
+                "field_multimedia_meta": null,
+                "field_next_review_date": "2018-06-01",
+                "field_review_exclude": false,
+                "field_scheduled_publish": null,
+                "field_subtitle": null,
+                "field_summary": "An interactive map of case studies highlighting places that are experimenting with and implementing new technologies to achieve better health outcomes or more efficient care.\r\n"
+            },
+            "relationships": {
+                "node_type": {
+                    "data": {
+                        "type": "node_type--node_type",
+                        "id": "3f28dfca-c329-4171-b671-3b091e29654b",
+                        "meta": { "drupal_internal__target_id": "page" }
+                    },
+                    "links": {
+                        "related": {
+                            "href": "http://localhost:8080/jsonapi/node/page/64278506-aab8-4cbf-a052-df3294b5ccd3/node_type?resourceVersion=id%3A207914"
+                        },
+                        "self": {
+                            "href": "http://localhost:8080/jsonapi/node/page/64278506-aab8-4cbf-a052-df3294b5ccd3/relationships/node_type?resourceVersion=id%3A207914"
+                        }
+                    }
+                },
+                "revision_uid": {
+                    "data": {
+                        "type": "user--user",
+                        "id": "0c16e35c-16d9-4365-8cb2-67cd41e3672a",
+                        "meta": { "drupal_internal__target_id": 50805 }
+                    },
+                    "links": {
+                        "related": {
+                            "href": "http://localhost:8080/jsonapi/node/page/64278506-aab8-4cbf-a052-df3294b5ccd3/revision_uid?resourceVersion=id%3A207914"
+                        },
+                        "self": {
+                            "href": "http://localhost:8080/jsonapi/node/page/64278506-aab8-4cbf-a052-df3294b5ccd3/relationships/revision_uid?resourceVersion=id%3A207914"
+                        }
+                    }
+                },
+                "uid": {
+                    "data": {
+                        "type": "user--user",
+                        "id": "ae8b13e2-44ad-42b9-8779-542f8e0fc12d",
+                        "meta": { "drupal_internal__target_id": 0 }
+                    },
+                    "links": {
+                        "related": {
+                            "href": "http://localhost:8080/jsonapi/node/page/64278506-aab8-4cbf-a052-df3294b5ccd3/uid?resourceVersion=id%3A207914"
+                        },
+                        "self": {
+                            "href": "http://localhost:8080/jsonapi/node/page/64278506-aab8-4cbf-a052-df3294b5ccd3/relationships/uid?resourceVersion=id%3A207914"
+                        }
+                    }
+                },
+                "field_author": {
+                    "data": [],
+                    "links": {
+                        "related": {
+                            "href": "http://localhost:8080/jsonapi/node/page/64278506-aab8-4cbf-a052-df3294b5ccd3/field_author?resourceVersion=id%3A207914"
+                        },
+                        "self": {
+                            "href": "http://localhost:8080/jsonapi/node/page/64278506-aab8-4cbf-a052-df3294b5ccd3/relationships/field_author?resourceVersion=id%3A207914"
+                        }
+                    }
+                },
+                "field_colour": {
+                    "data": {
+                        "type": "taxonomy_term--colours",
+                        "id": "4294da0d-467f-4774-8e51-eb635c9ea487",
+                        "meta": { "drupal_internal__target_id": 5826 }
+                    },
+                    "links": {
+                        "related": {
+                            "href": "http://localhost:8080/jsonapi/node/page/64278506-aab8-4cbf-a052-df3294b5ccd3/field_colour?resourceVersion=id%3A207914"
+                        },
+                        "self": {
+                            "href": "http://localhost:8080/jsonapi/node/page/64278506-aab8-4cbf-a052-df3294b5ccd3/relationships/field_colour?resourceVersion=id%3A207914"
+                        }
+                    }
+                },
+                "field_health_topics": {
+                    "data": [
+                        {
+                            "type": "taxonomy_term--topics",
+                            "id": "447cdee7-c179-4f56-af1b-f4be55861a73",
+                            "meta": { "drupal_internal__target_id": 7843 }
+                        }
+                    ],
+                    "links": {
+                        "related": {
+                            "href": "http://localhost:8080/jsonapi/node/page/64278506-aab8-4cbf-a052-df3294b5ccd3/field_health_topics?resourceVersion=id%3A207914"
+                        },
+                        "self": {
+                            "href": "http://localhost:8080/jsonapi/node/page/64278506-aab8-4cbf-a052-df3294b5ccd3/relationships/field_health_topics?resourceVersion=id%3A207914"
+                        }
+                    }
+                },
+                "field_hero_promo": {
+                    "data": null,
+                    "links": {
+                        "related": {
+                            "href": "http://localhost:8080/jsonapi/node/page/64278506-aab8-4cbf-a052-df3294b5ccd3/field_hero_promo?resourceVersion=id%3A207914"
+                        },
+                        "self": {
+                            "href": "http://localhost:8080/jsonapi/node/page/64278506-aab8-4cbf-a052-df3294b5ccd3/relationships/field_hero_promo?resourceVersion=id%3A207914"
+                        }
+                    }
+                },
+                "field_image": {
+                    "data": {
+                        "type": "media--image",
+                        "id": "7ee75109-3cec-441d-9ada-91a5a743b7e2",
+                        "meta": { "drupal_internal__target_id": 32405 }
+                    },
+                    "links": {
+                        "related": {
+                            "href": "http://localhost:8080/jsonapi/node/page/64278506-aab8-4cbf-a052-df3294b5ccd3/field_image?resourceVersion=id%3A207914"
+                        },
+                        "self": {
+                            "href": "http://localhost:8080/jsonapi/node/page/64278506-aab8-4cbf-a052-df3294b5ccd3/relationships/field_image?resourceVersion=id%3A207914"
+                        }
+                    }
+                },
+                "field_multimedia_type": {
+                    "data": {
+                        "type": "taxonomy_term--multimedia_type",
+                        "id": "9bcb5704-508f-4093-b90c-b535b3e9e036",
+                        "meta": { "drupal_internal__target_id": 8193 }
+                    },
+                    "links": {
+                        "related": {
+                            "href": "http://localhost:8080/jsonapi/node/page/64278506-aab8-4cbf-a052-df3294b5ccd3/field_multimedia_type?resourceVersion=id%3A207914"
+                        },
+                        "self": {
+                            "href": "http://localhost:8080/jsonapi/node/page/64278506-aab8-4cbf-a052-df3294b5ccd3/relationships/field_multimedia_type?resourceVersion=id%3A207914"
+                        }
+                    }
+                },
+                "field_pattern": {
+                    "data": {
+                        "type": "taxonomy_term--patterns",
+                        "id": "a512edc1-6d4a-4232-841a-98e44db9f056",
+                        "meta": { "drupal_internal__target_id": 5825 }
+                    },
+                    "links": {
+                        "related": {
+                            "href": "http://localhost:8080/jsonapi/node/page/64278506-aab8-4cbf-a052-df3294b5ccd3/field_pattern?resourceVersion=id%3A207914"
+                        },
+                        "self": {
+                            "href": "http://localhost:8080/jsonapi/node/page/64278506-aab8-4cbf-a052-df3294b5ccd3/relationships/field_pattern?resourceVersion=id%3A207914"
+                        }
+                    }
+                },
+                "field_projects": {
+                    "data": [],
+                    "links": {
+                        "related": {
+                            "href": "http://localhost:8080/jsonapi/node/page/64278506-aab8-4cbf-a052-df3294b5ccd3/field_projects?resourceVersion=id%3A207914"
+                        },
+                        "self": {
+                            "href": "http://localhost:8080/jsonapi/node/page/64278506-aab8-4cbf-a052-df3294b5ccd3/relationships/field_projects?resourceVersion=id%3A207914"
+                        }
+                    }
+                },
+                "field_project_status": {
+                    "data": null,
+                    "links": {
+                        "related": {
+                            "href": "http://localhost:8080/jsonapi/node/page/64278506-aab8-4cbf-a052-df3294b5ccd3/field_project_status?resourceVersion=id%3A207914"
+                        },
+                        "self": {
+                            "href": "http://localhost:8080/jsonapi/node/page/64278506-aab8-4cbf-a052-df3294b5ccd3/relationships/field_project_status?resourceVersion=id%3A207914"
+                        }
+                    }
+                },
+                "field_pseudo_label": {
+                    "data": {
+                        "type": "taxonomy_term--pseudo_label",
+                        "id": "24f9f6ba-92e8-499f-9bfe-ba58a6364f66",
+                        "meta": { "drupal_internal__target_id": 8195 }
+                    },
+                    "links": {
+                        "related": {
+                            "href": "http://localhost:8080/jsonapi/node/page/64278506-aab8-4cbf-a052-df3294b5ccd3/field_pseudo_label?resourceVersion=id%3A207914"
+                        },
+                        "self": {
+                            "href": "http://localhost:8080/jsonapi/node/page/64278506-aab8-4cbf-a052-df3294b5ccd3/relationships/field_pseudo_label?resourceVersion=id%3A207914"
+                        }
+                    }
+                },
+                "field_pseudo_type": {
+                    "data": {
+                        "type": "taxonomy_term--pseudo_type",
+                        "id": "44867b41-ce6b-4d5c-8355-f83e0e05df76",
+                        "meta": { "drupal_internal__target_id": 5864 }
+                    },
+                    "links": {
+                        "related": {
+                            "href": "http://localhost:8080/jsonapi/node/page/64278506-aab8-4cbf-a052-df3294b5ccd3/field_pseudo_type?resourceVersion=id%3A207914"
+                        },
+                        "self": {
+                            "href": "http://localhost:8080/jsonapi/node/page/64278506-aab8-4cbf-a052-df3294b5ccd3/relationships/field_pseudo_type?resourceVersion=id%3A207914"
+                        }
+                    }
+                },
+                "field_slices": {
+                    "data": [
+                        {
+                            "type": "slice--teaser",
+                            "id": "201d8b99-f6d5-42d5-bb1f-e5ca631b178a",
+                            "meta": {
+                                "target_revision_id": 453765,
+                                "drupal_internal__target_id": 268547
+                            }
+                        }
+                    ],
+                    "links": {
+                        "related": {
+                            "href": "http://localhost:8080/jsonapi/node/page/64278506-aab8-4cbf-a052-df3294b5ccd3/field_slices?resourceVersion=id%3A207914"
+                        },
+                        "self": {
+                            "href": "http://localhost:8080/jsonapi/node/page/64278506-aab8-4cbf-a052-df3294b5ccd3/relationships/field_slices?resourceVersion=id%3A207914"
+                        }
+                    }
+                },
+                "field_social_sharing_image": {
+                    "data": null,
+                    "links": {
+                        "related": {
+                            "href": "http://localhost:8080/jsonapi/node/page/64278506-aab8-4cbf-a052-df3294b5ccd3/field_social_sharing_image?resourceVersion=id%3A207914"
+                        },
+                        "self": {
+                            "href": "http://localhost:8080/jsonapi/node/page/64278506-aab8-4cbf-a052-df3294b5ccd3/relationships/field_social_sharing_image?resourceVersion=id%3A207914"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "node--page",
+            "id": "4f89a1a7-4f39-43cb-91d5-adcec631dc9b",
+            "links": {
+                "self": {
+                    "href": "http://localhost:8080/jsonapi/node/page/4f89a1a7-4f39-43cb-91d5-adcec631dc9b?resourceVersion=id%3A208040"
+                }
+            },
+            "attributes": {
+                "drupal_internal__nid": 4010,
+                "drupal_internal__vid": 208040,
+                "langcode": "und",
+                "revision_timestamp": "2020-10-02T15:04:03+00:00",
+                "revision_log": null,
+                "status": false,
+                "title": "Integrated care map",
+                "created": "2013-09-24T23:00:00+00:00",
+                "changed": "2021-12-06T17:26:27+00:00",
+                "promote": false,
+                "sticky": false,
+                "default_langcode": true,
+                "revision_translation_affected": true,
+                "moderation_state": "archived",
+                "metatag": null,
+                "path": {
+                    "alias": "/audio-video/integrated-care-map",
+                    "pid": 32251,
+                    "langcode": "und"
+                },
+                "rh_action": "bundle_default",
+                "rh_redirect": null,
+                "rh_redirect_response": 301,
+                "rh_redirect_fallback_action": null,
+                "sae_exclude": false,
+                "body": {
+                    "value": "\u003Cp class=\u0022o-type-intro\u0022\u003EThere are already some great examples of individuals and organisations working together to create joined-up, integrated care that is centred around patients\u0027 needs. We\u0027ve pulled together this map to help highlight integrated care and new models of care in practice. The map is not intended to be comprehensive, but draws on our research and analysis, and our role in bringing people together to make integrated care happen.\u003C/p\u003E\r\n",
+                    "format": "full_html",
+                    "processed": "\u003Cp class=\u0022o-type-intro\u0022\u003EThere are already some great examples of individuals and organisations working together to create joined-up, integrated care that is centred around patients\u0027 needs. We\u0027ve pulled together this map to help highlight integrated care and new models of care in practice. The map is not intended to be comprehensive, but draws on our research and analysis, and our role in bringing people together to make integrated care happen.\u003C/p\u003E",
+                    "summary": ""
+                },
+                "field_author_name": [],
+                "field_code": null,
+                "field_comments": {
+                    "status": 2,
+                    "cid": 562242,
+                    "last_comment_timestamp": 1572098267,
+                    "last_comment_name": "MARY ASUMPTA KAMAU",
+                    "last_comment_uid": 0,
+                    "comment_count": 11
+                },
+                "field_content_owner": "Digital Team",
+                "field_introduction": null,
+                "field_jump_links_cta": null,
+                "field_jump_link_label": null,
+                "field_last_review_date": "2017-11-26",
+                "field_meta_tags": null,
+                "field_multimedia_meta": null,
+                "field_next_review_date": "2018-05-26",
+                "field_review_exclude": false,
+                "field_scheduled_publish": null,
+                "field_subtitle": "examples of new models of care in practice",
+                "field_summary": "Our interactive map pulls together a range of case studies from the UK and abroad to help showcase joined-up care in action.\r\n"
+            },
+            "relationships": {
+                "node_type": {
+                    "data": {
+                        "type": "node_type--node_type",
+                        "id": "3f28dfca-c329-4171-b671-3b091e29654b",
+                        "meta": { "drupal_internal__target_id": "page" }
+                    },
+                    "links": {
+                        "related": {
+                            "href": "http://localhost:8080/jsonapi/node/page/4f89a1a7-4f39-43cb-91d5-adcec631dc9b/node_type?resourceVersion=id%3A208040"
+                        },
+                        "self": {
+                            "href": "http://localhost:8080/jsonapi/node/page/4f89a1a7-4f39-43cb-91d5-adcec631dc9b/relationships/node_type?resourceVersion=id%3A208040"
+                        }
+                    }
+                },
+                "revision_uid": {
+                    "data": {
+                        "type": "user--user",
+                        "id": "0c16e35c-16d9-4365-8cb2-67cd41e3672a",
+                        "meta": { "drupal_internal__target_id": 50805 }
+                    },
+                    "links": {
+                        "related": {
+                            "href": "http://localhost:8080/jsonapi/node/page/4f89a1a7-4f39-43cb-91d5-adcec631dc9b/revision_uid?resourceVersion=id%3A208040"
+                        },
+                        "self": {
+                            "href": "http://localhost:8080/jsonapi/node/page/4f89a1a7-4f39-43cb-91d5-adcec631dc9b/relationships/revision_uid?resourceVersion=id%3A208040"
+                        }
+                    }
+                },
+                "uid": {
+                    "data": {
+                        "type": "user--user",
+                        "id": "ae8b13e2-44ad-42b9-8779-542f8e0fc12d",
+                        "meta": { "drupal_internal__target_id": 0 }
+                    },
+                    "links": {
+                        "related": {
+                            "href": "http://localhost:8080/jsonapi/node/page/4f89a1a7-4f39-43cb-91d5-adcec631dc9b/uid?resourceVersion=id%3A208040"
+                        },
+                        "self": {
+                            "href": "http://localhost:8080/jsonapi/node/page/4f89a1a7-4f39-43cb-91d5-adcec631dc9b/relationships/uid?resourceVersion=id%3A208040"
+                        }
+                    }
+                },
+                "field_author": {
+                    "data": [],
+                    "links": {
+                        "related": {
+                            "href": "http://localhost:8080/jsonapi/node/page/4f89a1a7-4f39-43cb-91d5-adcec631dc9b/field_author?resourceVersion=id%3A208040"
+                        },
+                        "self": {
+                            "href": "http://localhost:8080/jsonapi/node/page/4f89a1a7-4f39-43cb-91d5-adcec631dc9b/relationships/field_author?resourceVersion=id%3A208040"
+                        }
+                    }
+                },
+                "field_colour": {
+                    "data": {
+                        "type": "taxonomy_term--colours",
+                        "id": "4294da0d-467f-4774-8e51-eb635c9ea487",
+                        "meta": { "drupal_internal__target_id": 5826 }
+                    },
+                    "links": {
+                        "related": {
+                            "href": "http://localhost:8080/jsonapi/node/page/4f89a1a7-4f39-43cb-91d5-adcec631dc9b/field_colour?resourceVersion=id%3A208040"
+                        },
+                        "self": {
+                            "href": "http://localhost:8080/jsonapi/node/page/4f89a1a7-4f39-43cb-91d5-adcec631dc9b/relationships/field_colour?resourceVersion=id%3A208040"
+                        }
+                    }
+                },
+                "field_health_topics": {
+                    "data": [
+                        {
+                            "type": "taxonomy_term--topics",
+                            "id": "2103bc8a-87e6-48bb-ad07-bcd65b762479",
+                            "meta": { "drupal_internal__target_id": 7834 }
+                        }
+                    ],
+                    "links": {
+                        "related": {
+                            "href": "http://localhost:8080/jsonapi/node/page/4f89a1a7-4f39-43cb-91d5-adcec631dc9b/field_health_topics?resourceVersion=id%3A208040"
+                        },
+                        "self": {
+                            "href": "http://localhost:8080/jsonapi/node/page/4f89a1a7-4f39-43cb-91d5-adcec631dc9b/relationships/field_health_topics?resourceVersion=id%3A208040"
+                        }
+                    }
+                },
+                "field_hero_promo": {
+                    "data": null,
+                    "links": {
+                        "related": {
+                            "href": "http://localhost:8080/jsonapi/node/page/4f89a1a7-4f39-43cb-91d5-adcec631dc9b/field_hero_promo?resourceVersion=id%3A208040"
+                        },
+                        "self": {
+                            "href": "http://localhost:8080/jsonapi/node/page/4f89a1a7-4f39-43cb-91d5-adcec631dc9b/relationships/field_hero_promo?resourceVersion=id%3A208040"
+                        }
+                    }
+                },
+                "field_image": {
+                    "data": {
+                        "type": "media--image",
+                        "id": "04d57974-fd9f-4dcc-862f-ba2f9bd74047",
+                        "meta": { "drupal_internal__target_id": 30534 }
+                    },
+                    "links": {
+                        "related": {
+                            "href": "http://localhost:8080/jsonapi/node/page/4f89a1a7-4f39-43cb-91d5-adcec631dc9b/field_image?resourceVersion=id%3A208040"
+                        },
+                        "self": {
+                            "href": "http://localhost:8080/jsonapi/node/page/4f89a1a7-4f39-43cb-91d5-adcec631dc9b/relationships/field_image?resourceVersion=id%3A208040"
+                        }
+                    }
+                },
+                "field_multimedia_type": {
+                    "data": {
+                        "type": "taxonomy_term--multimedia_type",
+                        "id": "9bcb5704-508f-4093-b90c-b535b3e9e036",
+                        "meta": { "drupal_internal__target_id": 8193 }
+                    },
+                    "links": {
+                        "related": {
+                            "href": "http://localhost:8080/jsonapi/node/page/4f89a1a7-4f39-43cb-91d5-adcec631dc9b/field_multimedia_type?resourceVersion=id%3A208040"
+                        },
+                        "self": {
+                            "href": "http://localhost:8080/jsonapi/node/page/4f89a1a7-4f39-43cb-91d5-adcec631dc9b/relationships/field_multimedia_type?resourceVersion=id%3A208040"
+                        }
+                    }
+                },
+                "field_pattern": {
+                    "data": {
+                        "type": "taxonomy_term--patterns",
+                        "id": "a512edc1-6d4a-4232-841a-98e44db9f056",
+                        "meta": { "drupal_internal__target_id": 5825 }
+                    },
+                    "links": {
+                        "related": {
+                            "href": "http://localhost:8080/jsonapi/node/page/4f89a1a7-4f39-43cb-91d5-adcec631dc9b/field_pattern?resourceVersion=id%3A208040"
+                        },
+                        "self": {
+                            "href": "http://localhost:8080/jsonapi/node/page/4f89a1a7-4f39-43cb-91d5-adcec631dc9b/relationships/field_pattern?resourceVersion=id%3A208040"
+                        }
+                    }
+                },
+                "field_projects": {
+                    "data": [],
+                    "links": {
+                        "related": {
+                            "href": "http://localhost:8080/jsonapi/node/page/4f89a1a7-4f39-43cb-91d5-adcec631dc9b/field_projects?resourceVersion=id%3A208040"
+                        },
+                        "self": {
+                            "href": "http://localhost:8080/jsonapi/node/page/4f89a1a7-4f39-43cb-91d5-adcec631dc9b/relationships/field_projects?resourceVersion=id%3A208040"
+                        }
+                    }
+                },
+                "field_project_status": {
+                    "data": null,
+                    "links": {
+                        "related": {
+                            "href": "http://localhost:8080/jsonapi/node/page/4f89a1a7-4f39-43cb-91d5-adcec631dc9b/field_project_status?resourceVersion=id%3A208040"
+                        },
+                        "self": {
+                            "href": "http://localhost:8080/jsonapi/node/page/4f89a1a7-4f39-43cb-91d5-adcec631dc9b/relationships/field_project_status?resourceVersion=id%3A208040"
+                        }
+                    }
+                },
+                "field_pseudo_label": {
+                    "data": {
+                        "type": "taxonomy_term--pseudo_label",
+                        "id": "24f9f6ba-92e8-499f-9bfe-ba58a6364f66",
+                        "meta": { "drupal_internal__target_id": 8195 }
+                    },
+                    "links": {
+                        "related": {
+                            "href": "http://localhost:8080/jsonapi/node/page/4f89a1a7-4f39-43cb-91d5-adcec631dc9b/field_pseudo_label?resourceVersion=id%3A208040"
+                        },
+                        "self": {
+                            "href": "http://localhost:8080/jsonapi/node/page/4f89a1a7-4f39-43cb-91d5-adcec631dc9b/relationships/field_pseudo_label?resourceVersion=id%3A208040"
+                        }
+                    }
+                },
+                "field_pseudo_type": {
+                    "data": {
+                        "type": "taxonomy_term--pseudo_type",
+                        "id": "44867b41-ce6b-4d5c-8355-f83e0e05df76",
+                        "meta": { "drupal_internal__target_id": 5864 }
+                    },
+                    "links": {
+                        "related": {
+                            "href": "http://localhost:8080/jsonapi/node/page/4f89a1a7-4f39-43cb-91d5-adcec631dc9b/field_pseudo_type?resourceVersion=id%3A208040"
+                        },
+                        "self": {
+                            "href": "http://localhost:8080/jsonapi/node/page/4f89a1a7-4f39-43cb-91d5-adcec631dc9b/relationships/field_pseudo_type?resourceVersion=id%3A208040"
+                        }
+                    }
+                },
+                "field_slices": {
+                    "data": [
+                        {
+                            "type": "slice--content",
+                            "id": "ebcf487a-4eba-490a-84e9-f51f53e197d4",
+                            "meta": {
+                                "target_revision_id": 454180,
+                                "drupal_internal__target_id": 266846
+                            }
+                        },
+                        {
+                            "type": "slice--content",
+                            "id": "6f232ada-64be-45ad-a81d-a0865d75a68b",
+                            "meta": {
+                                "target_revision_id": 454181,
+                                "drupal_internal__target_id": 262724
+                            }
+                        }
+                    ],
+                    "links": {
+                        "related": {
+                            "href": "http://localhost:8080/jsonapi/node/page/4f89a1a7-4f39-43cb-91d5-adcec631dc9b/field_slices?resourceVersion=id%3A208040"
+                        },
+                        "self": {
+                            "href": "http://localhost:8080/jsonapi/node/page/4f89a1a7-4f39-43cb-91d5-adcec631dc9b/relationships/field_slices?resourceVersion=id%3A208040"
+                        }
+                    }
+                },
+                "field_social_sharing_image": {
+                    "data": null,
+                    "links": {
+                        "related": {
+                            "href": "http://localhost:8080/jsonapi/node/page/4f89a1a7-4f39-43cb-91d5-adcec631dc9b/field_social_sharing_image?resourceVersion=id%3A208040"
+                        },
+                        "self": {
+                            "href": "http://localhost:8080/jsonapi/node/page/4f89a1a7-4f39-43cb-91d5-adcec631dc9b/relationships/field_social_sharing_image?resourceVersion=id%3A208040"
+                        }
+                    }
+                }
+            }
+        }
+    ],
+    "included": [
+        {
+            "type": "slice--teaser",
+            "id": "201d8b99-f6d5-42d5-bb1f-e5ca631b178a",
+            "links": {
+                "self": {
+                    "href": "http://localhost:8080/jsonapi/slice/teaser/201d8b99-f6d5-42d5-bb1f-e5ca631b178a?resourceVersion=id%3A453765"
+                }
+            },
+            "attributes": {
+                "drupal_internal__id": 268547,
+                "drupal_internal__revision_id": 453765,
+                "name": null,
+                "status": true,
+                "view_mode": null,
+                "langcode": "und",
+                "created": "2018-06-20T17:13:15+00:00",
+                "changed": "2018-06-20T17:14:14+00:00",
+                "parent_id": "6184",
+                "parent_type": "node",
+                "parent_field_name": "field_slices",
+                "default_langcode": true,
+                "revision_translation_affected": null,
+                "metatag": null,
+                "field_anchor": null,
+                "field_jump_link_label": null,
+                "field_title": "Find out more"
+            },
+            "relationships": {
+                "slice_type": {
+                    "data": {
+                        "type": "slice_type--slice_type",
+                        "id": "e5f1954b-1d6c-40e7-b984-a7f6e2f58869",
+                        "meta": { "drupal_internal__target_id": "teaser" }
+                    },
+                    "links": {
+                        "related": {
+                            "href": "http://localhost:8080/jsonapi/slice/teaser/201d8b99-f6d5-42d5-bb1f-e5ca631b178a/slice_type?resourceVersion=id%3A453765"
+                        },
+                        "self": {
+                            "href": "http://localhost:8080/jsonapi/slice/teaser/201d8b99-f6d5-42d5-bb1f-e5ca631b178a/relationships/slice_type?resourceVersion=id%3A453765"
+                        }
+                    }
+                },
+                "user_id": {
+                    "data": {
+                        "type": "user--user",
+                        "id": "a2227c46-d8c3-4656-aae4-6d1f3b8bef75",
+                        "meta": { "drupal_internal__target_id": 925 }
+                    },
+                    "links": {
+                        "related": {
+                            "href": "http://localhost:8080/jsonapi/slice/teaser/201d8b99-f6d5-42d5-bb1f-e5ca631b178a/user_id?resourceVersion=id%3A453765"
+                        },
+                        "self": {
+                            "href": "http://localhost:8080/jsonapi/slice/teaser/201d8b99-f6d5-42d5-bb1f-e5ca631b178a/relationships/user_id?resourceVersion=id%3A453765"
+                        }
+                    }
+                },
+                "revision_uid": {
+                    "data": {
+                        "type": "user--user",
+                        "id": "a2227c46-d8c3-4656-aae4-6d1f3b8bef75",
+                        "meta": { "drupal_internal__target_id": 925 }
+                    },
+                    "links": {
+                        "related": {
+                            "href": "http://localhost:8080/jsonapi/slice/teaser/201d8b99-f6d5-42d5-bb1f-e5ca631b178a/revision_uid?resourceVersion=id%3A453765"
+                        },
+                        "self": {
+                            "href": "http://localhost:8080/jsonapi/slice/teaser/201d8b99-f6d5-42d5-bb1f-e5ca631b178a/relationships/revision_uid?resourceVersion=id%3A453765"
+                        }
+                    }
+                },
+                "field_teaser_item": {
+                    "data": [
+                        {
+                            "type": "node--publication",
+                            "id": "70b5fb69-da35-4f52-92a9-0fcc8373a381",
+                            "meta": { "drupal_internal__target_id": 93068 }
+                        },
+                        {
+                            "type": "node--event",
+                            "id": "fb0b3998-3f6f-4e55-b572-3c2c5b532aae",
+                            "meta": { "drupal_internal__target_id": 92709 }
+                        },
+                        {
+                            "type": "node--blog",
+                            "id": "45fd7c36-cd59-4ac0-93b9-96ca41b47bfb",
+                            "meta": { "drupal_internal__target_id": 93046 }
+                        }
+                    ],
+                    "links": {
+                        "related": {
+                            "href": "http://localhost:8080/jsonapi/slice/teaser/201d8b99-f6d5-42d5-bb1f-e5ca631b178a/field_teaser_item?resourceVersion=id%3A453765"
+                        },
+                        "self": {
+                            "href": "http://localhost:8080/jsonapi/slice/teaser/201d8b99-f6d5-42d5-bb1f-e5ca631b178a/relationships/field_teaser_item?resourceVersion=id%3A453765"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "slice--content",
+            "id": "ebcf487a-4eba-490a-84e9-f51f53e197d4",
+            "links": {
+                "self": {
+                    "href": "http://localhost:8080/jsonapi/slice/content/ebcf487a-4eba-490a-84e9-f51f53e197d4?resourceVersion=id%3A454180"
+                }
+            },
+            "attributes": {
+                "drupal_internal__id": 266846,
+                "drupal_internal__revision_id": 454180,
+                "name": null,
+                "status": true,
+                "view_mode": null,
+                "langcode": "und",
+                "created": "2017-08-09T14:21:01+00:00",
+                "changed": "2017-08-09T14:22:09+00:00",
+                "parent_id": "4010",
+                "parent_type": "node",
+                "parent_field_name": "field_slices",
+                "default_langcode": true,
+                "revision_translation_affected": null,
+                "metatag": null,
+                "field_anchor": null,
+                "field_enable_sidebar_jumplinks": null,
+                "field_jump_link_label": null,
+                "field_text_content": {
+                    "value": "\u003Cdrupal-entity data-embed-button=\u0022javascript_embed\u0022 data-entity-embed-display=\u0022view_mode:media.large\u0022 data-entity-type=\u0022media\u0022 data-entity-uuid=\u0022650f7f49-abb3-4022-9f7b-39e8528b2d39\u0022\u003E\u003C/drupal-entity\u003E\r\n",
+                    "format": "full_html",
+                    "processed": "\u003Cdiv data-embed-button=\u0022javascript_embed\u0022 data-entity-embed-display=\u0022view_mode:media.large\u0022 data-entity-type=\u0022media\u0022 data-entity-uuid=\u0022650f7f49-abb3-4022-9f7b-39e8528b2d39\u0022 data-entity-embed-display-settings=\u0022[]\u0022 data-langcode=\u0022und\u0022 class=\u0022embedded-entity c-media c-media--javascript view-mode-large\u0022\u003E\u003Cdiv class=\u0022media__wrapper\u0022\u003E\n      \u003Cscript src=\u0022https://maps.googleapis.com/maps/api/js?key=AIzaSyB8ai-H5euxMQOxoHrx7eca7yb2niJs33A\u0022\u003E\u003C/script\u003E\u003Cscript src=\u0022https://www.google.com/jsapi\u0022\u003E\u003C/script\u003E\u003Cscript src=\u0022https://cdn.rawgit.com/googlemaps/js-info-bubble/gh-pages/src/infobubble-compiled.js\u0022\u003E\u003C/script\u003E\u003Cscript\u003E\n\u003C!--//--\u003E\u003C![CDATA[// \u003E\u003C!--\n\n\u003C!--//--\u003E\u003C![CDATA[// \u003E\u003C!--\n\u003C!--//--\u003E\u003C![CDATA[// \u003E\u003C!--\n\n\u003C!--//--\u003E\u003C![CDATA[// \u003E\u003C!--\n     google.load(\u0027visualization\u0027, \u00271\u0027);\n      var markers = [];\n      var map;\n\n      function initialize() {\n        var max_width = Math.round(document.getElementById(\u0027map\u0027).offsetWidth * 0.8);\n        var infoBubbles = [];\n        var kf_map_style = [\n          { \u0022elementType\u0022: \u0022labels.text.stroke\u0022, \u0022stylers\u0022: [ { \u0022visibility\u0022: \u0022off\u0022 } ] },\n          { \u0022elementType\u0022: \u0022labels.text.fill\u0022, \u0022stylers\u0022: [ { \u0022color\u0022: \u0022#000000\u0022 } ] },\n          { \u0022elementType\u0022: \u0022labels.icon\u0022, \u0022stylers\u0022: [ { \u0022visibility\u0022: \u0022on\u0022 }, { \u0022color\u0022: \u0022#000000\u0022 } ] },\n          { \u0022featureType\u0022: \u0022water\u0022, \u0022stylers\u0022: [ { \u0022color\u0022: \u0022#808080\u0022 } ] },\n          { \u0022featureType\u0022: \u0022landscape\u0022, \u0022stylers\u0022: [ { \u0022color\u0022: \u0022#b0b91d\u0022 } ] },\n          { \u0022featureType\u0022: \u0022poi\u0022, \u0022stylers\u0022: [ { \u0022visibility\u0022: \u0022off\u0022 } ] },\n          { \u0022featureType\u0022: \u0022poi\u0022, \u0022elementType\u0022: \u0022labels\u0022, \u0022stylers\u0022: [ { \u0022visibility\u0022: \u0022off\u0022 } ] },\n          { \u0022featureType\u0022: \u0022road\u0022, \u0022stylers\u0022: [ { \u0022color\u0022: \u0022#c3cb3f\u0022 } ] },\n          { \u0022featureType\u0022: \u0022road\u0022, \u0022elementType\u0022: \u0022labels\u0022, \u0022stylers\u0022: [ { \u0022visibility\u0022: \u0022off\u0022 } ] },\n          { \u0022featureType\u0022: \u0022administrative.country\u0022, \u0022stylers\u0022: [ { \u0022visibility\u0022: \u0022simplified\u0022 } ] }\n        ];\n\n        var opt = {\n          mapTypeControlOptions: {\n            mapTypeIds: [\u0027KF\u0027]\n          },\n          disableDefaultUI: true,\n          navigationControl: true,\n          center: new google.maps.LatLng(54.559322, -4.174804),\n          zoom: 5,\n          minZoom: 2,\n          zoomControl:true,\n          mapTypeId: \u0027KF\u0027\n        };\n\n        map = new google.maps.Map(document.getElementById(\u0027map\u0027), opt);\n        var styledMapType = new google.maps.StyledMapType(kf_map_style, {name: \u0027KF\u0027});\n        map.mapTypes.set(\u0027KF\u0027, styledMapType);\n\n        // Send query to Google Chart Tools to get data from table.\n        // Note: the Chart Tools API returns up to 500 rows.\n        var query = \u0022SELECT Title, Content, Coordinates, Category FROM 1KO4vHA6sF84EaJmcodVR2U6DLkIV-Vk-n7KiDLc\u0022;\n        query = encodeURIComponent(query);\n        var gvizQuery = new google.visualization.Query(\n            \u0027https://www.google.com/fusiontables/gvizdata?tq=\u0027 + query);\n\n        var createMarker = function(coordinate, data) {\n          var categories = [];\n          jQuery.each(data.categories.split(\u0027,\u0027), function(i, category){\n            categories.push(jQuery.trim(category));\n          });\n\n          var marker = new google.maps.Marker({\n            map: map,\n            position: coordinate,\n            icon: new google.maps.MarkerImage(\u0027https://www.kingsfund.org.uk/sites/default/files/2017-07/marker-pin.png\u0027),\n            title: data.title,\n            categories: categories\n          });\n          markers.push(marker);\n\n          var infoBubble = new InfoBubble({\n            shadowStyle: 0,\n            padding: 24,\n            backgroundColor: \u0027rgb(255,255,255)\u0027,\n            borderRadius: 0,\n            arrowSize: 10,\n            borderWidth: 0,\n            disableAutoPan: false,\n            hideCloseButton: false,\n            arrowPosition: \u002250%\u0022,\n            arrowStyle: 0,\n            maxWidth: max_width,\n            maxHeight: 320,\n            position: coordinate,\n            content: \u0027\u003Ch2\u003E\u0027 + data.title + \u0027\u0027 + data.content.replace(/\\\\n/g, \u0027\u0027)\n          });\n\n          infoBubbles[data.title+coordinate] = infoBubble;\n\n          google.maps.event.addListener(marker, \u0027click\u0027, function() {\n            if (!infoBubbles[marker.title+marker.position].isOpen()) {\n              if (map.getZoom() \u003C 3) { map.setZoom(3); }\n\n              for (var index in infoBubbles) {\n                infoBubbles[index].close();\n              }\n              infoBubbles[marker.title+marker.position].open(map, marker);\n            }\n          });\n          google.maps.event.addListener(map, \u0027zoom_changed\u0027, function() {\n            if (infoBubbles[marker.title+marker.position].isOpen()) {\n              if (map.getZoom() \u003C 3) { map.setZoom(3); }\n              map.setCenter(marker.getPosition());\n              map.panBy(0, -180);\n            }\n          });\n        };\n\n        google.maps.event.addListener(map, \u0022click\u0022, function() {\n          for (var index in infoBubbles) {\n            infoBubbles[index].close();\n          }\n        });\n        \n        gvizQuery.send(function(response) {\n          var numRows = response.getDataTable().getNumberOfRows();\n\n          // For each row in the table, create a marker\n          for (var i = 0; i \u003C numRows; i++) {\n            var stringCoordinates = response.getDataTable().getValue(i, 2);\n            var splitCoordinates = stringCoordinates.split(\u0027,\u0027);\n            var lat = splitCoordinates[0];\n            var lng = splitCoordinates[1];\n            var coordinate = new google.maps.LatLng(lat, lng);\n            var data = {\n              title: response.getDataTable().getValue(i, 0),\n              content: response.getDataTable().getValue(i, 1),\n              categories: response.getDataTable().getValue(i, 3)\n            }\n\n            createMarker(coordinate, data);\n          }\n        });\n\n        // setTimeout(\u0022map.setCenter(new google.maps.LatLng(54.559322, -4.174804)); map.setZoom(6);\u0022, 2000);\n      }\n\n      google.maps.event.addDomListener(window, \u0027load\u0027, initialize);\n//--\u003E\u003C!]]]]]]]]\u003E\u003C![CDATA[\u003E\u003C![CDATA[\u003E\u003C![CDATA[\u003E\n\n//--\u003E\u003C!]]]]]]\u003E\u003C![CDATA[\u003E\u003C![CDATA[\u003E\n//--\u003E\u003C!]]]]\u003E\u003C![CDATA[\u003E\n\n//--\u003E\u003C!]]\u003E\n\u003C/script\u003E\u003Cscript\u003E\n\u003C!--//--\u003E\u003C![CDATA[// \u003E\u003C!--\n\n\u003C!--//--\u003E\u003C![CDATA[// \u003E\u003C!--\n\u003C!--//--\u003E\u003C![CDATA[// \u003E\u003C!--\n\n\u003C!--//--\u003E\u003C![CDATA[// \u003E\u003C!--\n(function($) {\n  $(document).ready(function() {\n    $(\u0027#map-filters\u0027).change(function(e) {\n      var state  = $(this).attr(\u0027value\u0027);\n\n      for (var i=0; i\u003Cmarkers.length; i++) {\n        if (state === \u0027all\u0027) {\n          markers[i].setVisible(true);\n        }\n        else {\n          markers[i].setVisible($.inArray(state, markers[i].categories) !== -1);\n        }\n      }\n    });\n  });\n})(jQuery);\n//--\u003E\u003C!]]]]]]]]\u003E\u003C![CDATA[\u003E\u003C![CDATA[\u003E\u003C![CDATA[\u003E\n\n//--\u003E\u003C!]]]]]]\u003E\u003C![CDATA[\u003E\u003C![CDATA[\u003E\n//--\u003E\u003C!]]]]\u003E\u003C![CDATA[\u003E\n\n//--\u003E\u003C!]]\u003E\n\u003C/script\u003E\u003Cp\u003E\u003Cselect id=\u0022map-filters\u0022\u003E\u003Coption selected=\u0022selected\u0022 value=\u0022all\u0022\u003EShow all\u003C/option\u003E\u003Coption value=\u0022Children\u0027s services\u0022\u003EChildren\u0027s services\u003C/option\u003E Mental health\u003Coption value=\u0022Mental health\u0022\u003EMental health\u003C/option\u003E\u003Coption value=\u0022Older people\u0022\u003EOlder people\u003C/option\u003E\u003Coption value=\u0022Palliative care\u0022\u003EPalliative care\u003C/option\u003E\u003Coption value=\u0022Long-term conditions\u0022\u003ELong-term conditions\u003C/option\u003E\u003Coption value=\u0022Whole population\u0022\u003EWhole population\u003C/option\u003E\u003C/select\u003E\u003C/p\u003E\u003Cdiv id=\u0022map\u0022 style=\u0022width: 100%; height: 500px; max-width: 100%;\u0022\u003E\u00a0\u003C/div\u003E\n  \u003C/div\u003E\n\u003C/div\u003E"
+                },
+                "field_title": null
+            },
+            "relationships": {
+                "slice_type": {
+                    "data": {
+                        "type": "slice_type--slice_type",
+                        "id": "2ae9f9d3-302c-4660-a161-1312a9d8fe72",
+                        "meta": { "drupal_internal__target_id": "content" }
+                    },
+                    "links": {
+                        "related": {
+                            "href": "http://localhost:8080/jsonapi/slice/content/ebcf487a-4eba-490a-84e9-f51f53e197d4/slice_type?resourceVersion=id%3A454180"
+                        },
+                        "self": {
+                            "href": "http://localhost:8080/jsonapi/slice/content/ebcf487a-4eba-490a-84e9-f51f53e197d4/relationships/slice_type?resourceVersion=id%3A454180"
+                        }
+                    }
+                },
+                "user_id": {
+                    "data": {
+                        "type": "user--user",
+                        "id": "329ac4fd-73a1-4d99-893d-cc532e414aed",
+                        "meta": { "drupal_internal__target_id": 980 }
+                    },
+                    "links": {
+                        "related": {
+                            "href": "http://localhost:8080/jsonapi/slice/content/ebcf487a-4eba-490a-84e9-f51f53e197d4/user_id?resourceVersion=id%3A454180"
+                        },
+                        "self": {
+                            "href": "http://localhost:8080/jsonapi/slice/content/ebcf487a-4eba-490a-84e9-f51f53e197d4/relationships/user_id?resourceVersion=id%3A454180"
+                        }
+                    }
+                },
+                "revision_uid": {
+                    "data": {
+                        "type": "user--user",
+                        "id": "329ac4fd-73a1-4d99-893d-cc532e414aed",
+                        "meta": { "drupal_internal__target_id": 980 }
+                    },
+                    "links": {
+                        "related": {
+                            "href": "http://localhost:8080/jsonapi/slice/content/ebcf487a-4eba-490a-84e9-f51f53e197d4/revision_uid?resourceVersion=id%3A454180"
+                        },
+                        "self": {
+                            "href": "http://localhost:8080/jsonapi/slice/content/ebcf487a-4eba-490a-84e9-f51f53e197d4/relationships/revision_uid?resourceVersion=id%3A454180"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "slice--content",
+            "id": "6f232ada-64be-45ad-a81d-a0865d75a68b",
+            "links": {
+                "self": {
+                    "href": "http://localhost:8080/jsonapi/slice/content/6f232ada-64be-45ad-a81d-a0865d75a68b?resourceVersion=id%3A454181"
+                }
+            },
+            "attributes": {
+                "drupal_internal__id": 262724,
+                "drupal_internal__revision_id": 454181,
+                "name": "Integrated care case studies",
+                "status": true,
+                "view_mode": "default",
+                "langcode": "und",
+                "created": "2017-04-21T11:35:59+00:00",
+                "changed": "2017-04-21T11:35:59+00:00",
+                "parent_id": "4010",
+                "parent_type": "node",
+                "parent_field_name": "field_slices",
+                "default_langcode": true,
+                "revision_translation_affected": null,
+                "metatag": null,
+                "field_anchor": null,
+                "field_enable_sidebar_jumplinks": null,
+                "field_jump_link_label": null,
+                "field_text_content": {
+                    "value": "\r\n\r\n\u003Cp\u003EYou can also access the case studies shown on this map through the following links:\u003C/p\u003E\r\n\r\n\u003Ch3\u003EEngland\u003C/h3\u003E\r\n\r\n\u003Cul\u003E\r\n\t\u003Cli\u003E\u003Ca href=\u0022/node/5274\u0022\u003EAiredale NHS Foundation Trust\u003C/a\u003E\u003C/li\u003E\r\n\t\u003Cli\u003E\u003Ca href=\u0022/node/4997\u0022\u003EBedfordshire musculoskeletal services\u003C/a\u003E\u003C/li\u003E\r\n\t\u003Cli\u003E\u003Ca href=\u0022/node/4997\u0022\u003ECambridgeshire older people\u0026rsquo;s services\u003C/a\u003E\u003C/li\u003E\r\n\t\u003Cli\u003E\u003Ca href=\u0022/node/6023\u0022\u003ECity and Hackney primary care psychotherapy consultation service\u003C/a\u003E\u003C/li\u003E\r\n\t\u003Cli\u003E\u003Ca href=\u0022/node/4307\u0022\u003ECornwall\u003C/a\u003E\u003C/li\u003E\r\n\t\u003Cli\u003E\u003Ca href=\u0022/node/4093\u0022\u003ECumbria\u003C/a\u003E\u003C/li\u003E\r\n\t\u003Cli\u003E\u003Ca href=\u0022/node/6023\u0022\u003EDevon integrated perinatal mental health service \u003C/a\u003E\u003C/li\u003E\r\n\t\u003Cli\u003E\u003Ca href=\u0022/node/4675\u0022\u003EEast London\u003C/a\u003E\u003C/li\u003E\r\n\t\u003Cli\u003E\u003Ca href=\u0022/node/4945\u0022\u003EHaywood rheumatology centre\u003C/a\u003E\u003C/li\u003E\r\n\t\u003Cli\u003E\u003Ca href=\u0022/node/6023\u0022\u003EHighgate mental health unit physical health liaison service\u003C/a\u003E\u003C/li\u003E\r\n\t\u003Cli\u003E\u003Ca href=\u0022/node/6023\u0022\u003EHull psychological medicine services \u003C/a\u003E\u003C/li\u003E\r\n\t\u003Cli\u003E\u003Ca href=\u0022/node/4945\u0022\u003EImperial child health general practice hubs\u003C/a\u003E\u003C/li\u003E\r\n\t\u003Cli\u003E\u003Ca href=\u0022/node/4997\u0022\u003ELambeth mental health services\u003C/a\u003E\u003C/li\u003E\r\n\t\u003Cli\u003E\u003Ca href=\u0022/node/4955\u0022\u003ELeeds\u003C/a\u003E\u003C/li\u003E\r\n\t\u003Cli\u003E\u003Ca href=\u0022/node/4945\u0022\u003ELeeds interface geriatrician service\u003C/a\u003E\u003C/li\u003E\r\n\t\u003Cli\u003E\u003Ca href=\u0022/node/6023\u0022\u003ELIFT Psychology in Swindon\u003C/a\u003E\u003C/li\u003E\r\n\t\u003Cli\u003E\u003Ca href=\u0022/node/3993\u0022\u003EMidhurst Macmillan Service\u003C/a\u003E\u003C/li\u003E\r\n\t\u003Cli\u003E\u003Ca href=\u0022/node/4094\u0022\u003ENorth East Lincolnshire\u003C/a\u003E\u003C/li\u003E\r\n\t\u003Cli\u003E\u003Ca href=\u0022/node/4308\u0022\u003ENorth West London\u003C/a\u003E\u003C/li\u003E\r\n\t\u003Cli\u003E\u003Ca href=\u0022/node/5580\u0022\u003ENorthumbria\u003C/a\u003E\u003C/li\u003E\r\n\t\u003Cli\u003E\u003Ca href=\u0022/node/4675\u0022\u003ENorwich\u003C/a\u003E\u003C/li\u003E\r\n\t\u003Cli\u003E\u003Ca href=\u0022/node/6023\u0022\u003EOldham integrated persistent pain pathway\u003C/a\u003E\u003C/li\u003E\r\n\t\u003Cli\u003E\u003Ca href=\u0022/node/6023\u0022\u003EOxford Psychological Medicine Service\u003C/a\u003E\u003C/li\u003E\r\n\t\u003Cli\u003E\u003Ca href=\u0022/node/4033\u0022\u003EOxleas Advanced Dementia Service\u003C/a\u003E\u003C/li\u003E\r\n\t\u003Cli\u003E\u003Ca href=\u0022/node/4150\u0022\u003EPembrokeshire, Community Care Closer to Home project\u003C/a\u003E\u003C/li\u003E\r\n\t\u003Cli\u003E\u003Ca href=\u0022/node/4945\u0022\u003EPortsmouth and South East Hampshire diabetes service\u003C/a\u003E\u003C/li\u003E\r\n\t\u003Cli\u003E\u003Ca href=\u0022/node/4997\u0022\u003ESalford older people\u0026rsquo;s services\u003C/a\u003E\u003C/li\u003E\r\n\t\u003Cli\u003E\u003Ca href=\u0022/node/3985\u0022\u003ESandwell Integrated Primary Care Mental Health and Wellbeing Service\u003C/a\u003E\u003C/li\u003E\r\n\t\u003Cli\u003E\u003Ca href=\u0022/node/5579\u0022\u003ESheffield\u003C/a\u003E\u003C/li\u003E\r\n\t\u003Cli\u003E\u003Ca href=\u0022/node/4092\u0022\u003ESolihull\u003C/a\u003E\u003C/li\u003E\r\n\t\u003Cli\u003E\u003Ca href=\u0022/node/608\u0022\u003ESouth Devon and Torbay\u003C/a\u003E\u003C/li\u003E\r\n\t\u003Cli\u003E\u003Ca href=\u0022/node/5755\u0022\u003ESouthern Health NHS Foundation Trust\u003C/a\u003E\u003C/li\u003E\r\n\t\u003Cli\u003E\u003Ca href=\u0022/node/4091\u0022\u003ESouth Warwickshire\u003C/a\u003E\u003C/li\u003E\r\n\t\u003Cli\u003E\u003Ca href=\u0022/node/4997\u0022\u003EStaffordshire cancer and end-of-life-care services\u003C/a\u003E\u003C/li\u003E\r\n\t\u003Cli\u003E\u003Ca href=\u0022/node/4945\u0022\u003ESunderland dermatology and minor surgery service\u003C/a\u003E\u003C/li\u003E\r\n\t\u003Cli\u003E\u003Ca href=\u0022/node/4945\u0022\u003EWhittington respiratory service\u003C/a\u003E\u003C/li\u003E\r\n\t\u003Cli\u003E\u003Ca href=\u0022/node/4675\u0022\u003EWigan\u003C/a\u003E\u003C/li\u003E\r\n\t\u003Cli\u003E\u003Ca href=\u0022/node/5274\u0022\u003EYeovil District Hospital NHS Foundation Trust\u003C/a\u003E\u003C/li\u003E\r\n\u003C/ul\u003E\r\n\r\n\u003Ch3\u003EEurope\u003C/h3\u003E\r\n\r\n\u003Cul\u003E\r\n\t\u003Cli\u003E\u003Ca href=\u0022/node/4352\u0022\u003EGeriant, Noord-Holland province, the Netherlands\u003C/a\u003E\u003C/li\u003E\r\n\t\u003Cli\u003E\u003Ca href=\u0022/node/5232\u0022\u003EGesundes Kinzigtal, Germany\u003C/a\u003E\u003C/li\u003E\r\n\t\u003Cli\u003E\u003Ca href=\u0022/node/5232\u0022\u003EJ\u00f6nk\u00f6ping County Council, Sweden\u003C/a\u003E\u003C/li\u003E\r\n\t\u003Cli\u003E\u003Ca href=\u0022/node/4352\u0022\u003ENorrtalje, Sweden\u003C/a\u003E\u003C/li\u003E\r\n\u003C/ul\u003E\r\n\r\n\u003Ch3\u003ERest of the world\u003C/h3\u003E\r\n\r\n\u003Cul\u003E\r\n\t\u003Cli\u003E\u003Ca href=\u0022/node/4045\u0022\u003ECanterbury District Health Board, New Zealand\u003C/a\u003E\u003C/li\u003E\r\n\t\u003Cli\u003E\u003Ca href=\u0022/node/5232\u0022\u003ECounties Manukau, New Zealand\u003C/a\u003E\u003C/li\u003E\r\n\t\u003Cli\u003E\u003Ca href=\u0022/node/4352\u0022\u003EHealthOne Mount Druitt, Sydney, Australia\u003C/a\u003E\u003C/li\u003E\r\n\t\u003Cli\u003E\u003Ca href=\u0022/node/5578\u0022\u003EHospital in the Home, Victoria, Australia\u003C/a\u003E\u003C/li\u003E\r\n\t\u003Cli\u003E\u003Ca href=\u0022/node/5232\u0022\u003EKaiser Permanente, California, the United States\u003C/a\u003E\u003C/li\u003E\r\n\t\u003Cli\u003E\u003Ca href=\u0022/node/4352\u0022\u003EProgramme of Research to Integrate the Services for the Maintenance of Autonomy (PRISMA), Quebec, Canada\u003C/a\u003E\u003C/li\u003E\r\n\t\u003Cli\u003E\u003Ca href=\u0022/node/5232\u0022\u003ESouthcentral Foundation, Alaska\u003C/a\u003E\u003C/li\u003E\r\n\t\u003Cli\u003E\u003Ca href=\u0022/node/4352\u0022\u003ETe Whiringa Ora, Eastern Bay of Plenty, New Zealand\u003C/a\u003E\u003C/li\u003E\r\n\t\u003Cli\u003E\u003Ca href=\u0022/node/4352\u0022\u003EThe Massachusetts General Care Management Programme, Boston, the United States\u003C/a\u003E\u003C/li\u003E\r\n\t\u003Cli\u003E\u003Ca href=\u0022/node/2609\u0022\u003EVeterans Health Administration, the United States\u003C/a\u003E\u003C/li\u003E\r\n\u003C/ul\u003E\r\n",
+                    "format": "full_html",
+                    "processed": "\u003Cp\u003EYou can also access the case studies shown on this map through the following links:\u003C/p\u003E\n\n\u003Ch3\u003EEngland\u003C/h3\u003E\n\n\u003Cul\u003E\u003Cli\u003E\u003Ca href=\u0022/publications/acute-hospitals-and-integrated-care\u0022 data-entity-uuid=\u0022d4ca3d63-200a-4a8c-8020-14745f46e7f5\u0022 data-entity-type=\u0022node\u0022 data-entity-substitution=\u0022canonical\u0022 title=\u0022Acute hospitals and integrated care\u0022\u003EAiredale NHS Foundation Trust\u003C/a\u003E\u003C/li\u003E\n\t\u003Cli\u003E\u003Ca href=\u0022/publications/commissioning-contracting-integrated-care\u0022 data-entity-uuid=\u00221902312b-cf31-46c8-a81c-e87dcdfe6783\u0022 data-entity-type=\u0022node\u0022 data-entity-substitution=\u0022canonical\u0022 title=\u0022Commissioning and contracting for integrated care\u0022\u003EBedfordshire musculoskeletal services\u003C/a\u003E\u003C/li\u003E\n\t\u003Cli\u003E\u003Ca href=\u0022/publications/commissioning-contracting-integrated-care\u0022 data-entity-uuid=\u00221902312b-cf31-46c8-a81c-e87dcdfe6783\u0022 data-entity-type=\u0022node\u0022 data-entity-substitution=\u0022canonical\u0022 title=\u0022Commissioning and contracting for integrated care\u0022\u003ECambridgeshire older people\u2019s services\u003C/a\u003E\u003C/li\u003E\n\t\u003Cli\u003E\u003Ca href=\u0022/publications/physical-and-mental-health\u0022 data-entity-uuid=\u0022013cce09-e441-4955-90df-77f6de070358\u0022 data-entity-type=\u0022node\u0022 data-entity-substitution=\u0022canonical\u0022 title=\u0022Bringing together physical and mental health\u0022\u003ECity and Hackney primary care psychotherapy consultation service\u003C/a\u003E\u003C/li\u003E\n\t\u003Cli\u003E\u003Ca href=\u0022/audio-video/perspectives-integrated-care-kernow\u0022 data-entity-uuid=\u00222133894d-b0ce-4aa5-8a32-d4104acf0387\u0022 data-entity-type=\u0022node\u0022 data-entity-substitution=\u0022canonical\u0022 title=\u0022Perspectives on integrated care: Kernow\u0022\u003ECornwall\u003C/a\u003E\u003C/li\u003E\n\t\u003Cli\u003E\u003Ca href=\u0022/audio-video/perspectives-integrated-care-cumbria\u0022 data-entity-uuid=\u0022ed33d446-fd6f-4fd9-aaa3-7d0b27dc9fca\u0022 data-entity-type=\u0022node\u0022 data-entity-substitution=\u0022canonical\u0022 title=\u0022Perspectives on integrated care: Cumbria\u0022\u003ECumbria\u003C/a\u003E\u003C/li\u003E\n\t\u003Cli\u003E\u003Ca href=\u0022/publications/physical-and-mental-health\u0022 data-entity-uuid=\u0022013cce09-e441-4955-90df-77f6de070358\u0022 data-entity-type=\u0022node\u0022 data-entity-substitution=\u0022canonical\u0022 title=\u0022Bringing together physical and mental health\u0022\u003EDevon integrated perinatal mental health service \u003C/a\u003E\u003C/li\u003E\n\t\u003Cli\u003E\u003Ca href=\u0022/projects/integrated-care-collaborative-programme-four-communities\u0022 data-entity-uuid=\u00225be4ca2e-846a-462d-91ab-1f5f94e6d8c3\u0022 data-entity-type=\u0022node\u0022 data-entity-substitution=\u0022canonical\u0022 title=\u0022Integrated care collaborative programme for four communities\u0022\u003EEast London\u003C/a\u003E\u003C/li\u003E\n\t\u003Cli\u003E\u003Ca href=\u0022/publications/specialists-out-hospital-settings/case-studies\u0022 data-entity-uuid=\u00229f0e0dda-a07d-4646-8216-83b26ffd15b9\u0022 data-entity-type=\u0022node\u0022 data-entity-substitution=\u0022canonical\u0022 title=\u0022Specialists in out-of-hospital settings\u0022\u003EHaywood rheumatology centre\u003C/a\u003E\u003C/li\u003E\n\t\u003Cli\u003E\u003Ca href=\u0022/publications/physical-and-mental-health\u0022 data-entity-uuid=\u0022013cce09-e441-4955-90df-77f6de070358\u0022 data-entity-type=\u0022node\u0022 data-entity-substitution=\u0022canonical\u0022 title=\u0022Bringing together physical and mental health\u0022\u003EHighgate mental health unit physical health liaison service\u003C/a\u003E\u003C/li\u003E\n\t\u003Cli\u003E\u003Ca href=\u0022/publications/physical-and-mental-health\u0022 data-entity-uuid=\u0022013cce09-e441-4955-90df-77f6de070358\u0022 data-entity-type=\u0022node\u0022 data-entity-substitution=\u0022canonical\u0022 title=\u0022Bringing together physical and mental health\u0022\u003EHull psychological medicine services \u003C/a\u003E\u003C/li\u003E\n\t\u003Cli\u003E\u003Ca href=\u0022/publications/specialists-out-hospital-settings/case-studies\u0022 data-entity-uuid=\u00229f0e0dda-a07d-4646-8216-83b26ffd15b9\u0022 data-entity-type=\u0022node\u0022 data-entity-substitution=\u0022canonical\u0022 title=\u0022Specialists in out-of-hospital settings\u0022\u003EImperial child health general practice hubs\u003C/a\u003E\u003C/li\u003E\n\t\u003Cli\u003E\u003Ca href=\u0022/publications/commissioning-contracting-integrated-care\u0022 data-entity-uuid=\u00221902312b-cf31-46c8-a81c-e87dcdfe6783\u0022 data-entity-type=\u0022node\u0022 data-entity-substitution=\u0022canonical\u0022 title=\u0022Commissioning and contracting for integrated care\u0022\u003ELambeth mental health services\u003C/a\u003E\u003C/li\u003E\n\t\u003Cli\u003E\u003Ca href=\u0022/audio-video/rob-kenyon-integrating-innovation\u0022 data-entity-uuid=\u0022ed6f1a6e-e43d-4b31-b225-23a8d6a05a5b\u0022 data-entity-type=\u0022node\u0022 data-entity-substitution=\u0022canonical\u0022 title=\u0022Rob Kenyon: Integrating innovation\u0022\u003ELeeds\u003C/a\u003E\u003C/li\u003E\n\t\u003Cli\u003E\u003Ca href=\u0022/publications/specialists-out-hospital-settings/case-studies\u0022 data-entity-uuid=\u00229f0e0dda-a07d-4646-8216-83b26ffd15b9\u0022 data-entity-type=\u0022node\u0022 data-entity-substitution=\u0022canonical\u0022 title=\u0022Specialists in out-of-hospital settings\u0022\u003ELeeds interface geriatrician service\u003C/a\u003E\u003C/li\u003E\n\t\u003Cli\u003E\u003Ca href=\u0022/publications/physical-and-mental-health\u0022 data-entity-uuid=\u0022013cce09-e441-4955-90df-77f6de070358\u0022 data-entity-type=\u0022node\u0022 data-entity-substitution=\u0022canonical\u0022 title=\u0022Bringing together physical and mental health\u0022\u003ELIFT Psychology in Swindon\u003C/a\u003E\u003C/li\u003E\n\t\u003Cli\u003E\u003Ca href=\u0022/publications/midhurst-macmillan-community-specialist-palliative-care-service\u0022 data-entity-uuid=\u0022e4434a8e-3fb7-4f8b-a3ff-c571743b2f1e\u0022 data-entity-type=\u0022node\u0022 data-entity-substitution=\u0022canonical\u0022 title=\u0022Midhurst Macmillan Community Specialist Palliative Care Service\u0022\u003EMidhurst Macmillan Service\u003C/a\u003E\u003C/li\u003E\n\t\u003Cli\u003E\u003Ca href=\u0022/audio-video/perspectives-integrated-care-north-east-lincolnshire\u0022 data-entity-uuid=\u00226d900dcf-4325-4424-9f4e-fb6e63a01c75\u0022 data-entity-type=\u0022node\u0022 data-entity-substitution=\u0022canonical\u0022 title=\u0022Perspectives on integrated care: North East Lincolnshire\u0022\u003ENorth East Lincolnshire\u003C/a\u003E\u003C/li\u003E\n\t\u003Cli\u003E\u003Ca href=\u0022/audio-video/perspectives-integrated-care-north-west-london\u0022 data-entity-uuid=\u00227004dc71-d0e6-48bc-9cbd-9f02dc20dd68\u0022 data-entity-type=\u0022node\u0022 data-entity-substitution=\u0022canonical\u0022 title=\u0022Perspectives on integrated care: North West London\u0022\u003ENorth West London\u003C/a\u003E\u003C/li\u003E\n\t\u003Cli\u003E\u003Ca href=\u0022/audio-video/alistair-blair-integrated-care-northumbria\u0022 data-entity-uuid=\u002237ea1735-215c-4142-9183-411c6ed7c736\u0022 data-entity-type=\u0022node\u0022 data-entity-substitution=\u0022canonical\u0022 title=\u0022Alistair Blair: Building a caring future\u0022\u003ENorthumbria\u003C/a\u003E\u003C/li\u003E\n\t\u003Cli\u003E\u003Ca href=\u0022/projects/integrated-care-collaborative-programme-four-communities\u0022 data-entity-uuid=\u00225be4ca2e-846a-462d-91ab-1f5f94e6d8c3\u0022 data-entity-type=\u0022node\u0022 data-entity-substitution=\u0022canonical\u0022 title=\u0022Integrated care collaborative programme for four communities\u0022\u003ENorwich\u003C/a\u003E\u003C/li\u003E\n\t\u003Cli\u003E\u003Ca href=\u0022/publications/physical-and-mental-health\u0022 data-entity-uuid=\u0022013cce09-e441-4955-90df-77f6de070358\u0022 data-entity-type=\u0022node\u0022 data-entity-substitution=\u0022canonical\u0022 title=\u0022Bringing together physical and mental health\u0022\u003EOldham integrated persistent pain pathway\u003C/a\u003E\u003C/li\u003E\n\t\u003Cli\u003E\u003Ca href=\u0022/publications/physical-and-mental-health\u0022 data-entity-uuid=\u0022013cce09-e441-4955-90df-77f6de070358\u0022 data-entity-type=\u0022node\u0022 data-entity-substitution=\u0022canonical\u0022 title=\u0022Bringing together physical and mental health\u0022\u003EOxford Psychological Medicine Service\u003C/a\u003E\u003C/li\u003E\n\t\u003Cli\u003E\u003Ca href=\u0022/publications/oxleas-advanced-dementia-service\u0022 data-entity-uuid=\u002206e5d051-31d5-4a38-a01e-e70db41a2900\u0022 data-entity-type=\u0022node\u0022 data-entity-substitution=\u0022canonical\u0022 title=\u0022Oxleas Advanced Dementia Service\u0022\u003EOxleas Advanced Dementia Service\u003C/a\u003E\u003C/li\u003E\n\t\u003Cli\u003E\u003Ca href=\u0022/publications/developing-community-resource-teams-pembrokeshire-wales\u0022 data-entity-uuid=\u0022f8deb7ff-a2cd-4f44-8ff0-683bc83b4b35\u0022 data-entity-type=\u0022node\u0022 data-entity-substitution=\u0022canonical\u0022 title=\u0022Developing community resource teams in Pembrokeshire, Wales\u0022\u003EPembrokeshire, Community Care Closer to Home project\u003C/a\u003E\u003C/li\u003E\n\t\u003Cli\u003E\u003Ca href=\u0022/publications/specialists-out-hospital-settings/case-studies\u0022 data-entity-uuid=\u00229f0e0dda-a07d-4646-8216-83b26ffd15b9\u0022 data-entity-type=\u0022node\u0022 data-entity-substitution=\u0022canonical\u0022 title=\u0022Specialists in out-of-hospital settings\u0022\u003EPortsmouth and South East Hampshire diabetes service\u003C/a\u003E\u003C/li\u003E\n\t\u003Cli\u003E\u003Ca href=\u0022/publications/commissioning-contracting-integrated-care\u0022 data-entity-uuid=\u00221902312b-cf31-46c8-a81c-e87dcdfe6783\u0022 data-entity-type=\u0022node\u0022 data-entity-substitution=\u0022canonical\u0022 title=\u0022Commissioning and contracting for integrated care\u0022\u003ESalford older people\u2019s services\u003C/a\u003E\u003C/li\u003E\n\t\u003Cli\u003E\u003Ca href=\u0022/publications/esteem-team\u0022 data-entity-uuid=\u002288274754-eae0-4050-a20e-fabcca8329f4\u0022 data-entity-type=\u0022node\u0022 data-entity-substitution=\u0022canonical\u0022 title=\u0022The Esteem Team\u0022\u003ESandwell Integrated Primary Care Mental Health and Wellbeing Service\u003C/a\u003E\u003C/li\u003E\n\t\u003Cli\u003E\u003Ca href=\u0022/audio-video/kirsten-major-ruth-brown-integrated-care-sheffield\u0022 data-entity-uuid=\u002206919014-347e-4b6b-bfb5-b50024576e5b\u0022 data-entity-type=\u0022node\u0022 data-entity-substitution=\u0022canonical\u0022 title=\u0022Kirsten Major and Ruth Brown: Our integration journey in Sheffield\u0022\u003ESheffield\u003C/a\u003E\u003C/li\u003E\n\t\u003Cli\u003E\u003Ca href=\u0022/audio-video/perspectives-integrated-care-solihull\u0022 data-entity-uuid=\u0022f99035c4-d9bd-4dbc-a760-2923092a3105\u0022 data-entity-type=\u0022node\u0022 data-entity-substitution=\u0022canonical\u0022 title=\u0022Perspectives on integrated care: Solihull\u0022\u003ESolihull\u003C/a\u003E\u003C/li\u003E\n\t\u003Cli\u003E\u003Ca href=\u0022/publications/integrating-health-and-social-care-torbay\u0022 data-entity-uuid=\u0022856c9d0a-a494-4fb8-ab40-903e0282dc85\u0022 data-entity-type=\u0022node\u0022 data-entity-substitution=\u0022canonical\u0022 title=\u0022Integrating health and social care in Torbay\u0022\u003ESouth Devon and Torbay\u003C/a\u003E\u003C/li\u003E\n\t\u003Cli\u003E\u003Ca href=\u0022/audio-video/chris-ash-creating-mcp-southern-hampshire\u0022 data-entity-uuid=\u0022aac6aaf9-8325-426c-8d33-90ba7518b3dd\u0022 data-entity-type=\u0022node\u0022 data-entity-substitution=\u0022canonical\u0022 title=\u0022Chris Ash: creating a multi-speciality community provider in Southern Hampshire\u0022\u003ESouthern Health NHS Foundation Trust\u003C/a\u003E\u003C/li\u003E\n\t\u003Cli\u003E\u003Ca href=\u0022/audio-video/perspectives-integrated-care-south-warwickshire\u0022 data-entity-uuid=\u002251de6434-c7a5-449f-a82e-410de67833b1\u0022 data-entity-type=\u0022node\u0022 data-entity-substitution=\u0022canonical\u0022 title=\u0022Perspectives on integrated care: South Warwickshire\u0022\u003ESouth Warwickshire\u003C/a\u003E\u003C/li\u003E\n\t\u003Cli\u003E\u003Ca href=\u0022/publications/commissioning-contracting-integrated-care\u0022 data-entity-uuid=\u00221902312b-cf31-46c8-a81c-e87dcdfe6783\u0022 data-entity-type=\u0022node\u0022 data-entity-substitution=\u0022canonical\u0022 title=\u0022Commissioning and contracting for integrated care\u0022\u003EStaffordshire cancer and end-of-life-care services\u003C/a\u003E\u003C/li\u003E\n\t\u003Cli\u003E\u003Ca href=\u0022/publications/specialists-out-hospital-settings/case-studies\u0022 data-entity-uuid=\u00229f0e0dda-a07d-4646-8216-83b26ffd15b9\u0022 data-entity-type=\u0022node\u0022 data-entity-substitution=\u0022canonical\u0022 title=\u0022Specialists in out-of-hospital settings\u0022\u003ESunderland dermatology and minor surgery service\u003C/a\u003E\u003C/li\u003E\n\t\u003Cli\u003E\u003Ca href=\u0022/publications/specialists-out-hospital-settings/case-studies\u0022 data-entity-uuid=\u00229f0e0dda-a07d-4646-8216-83b26ffd15b9\u0022 data-entity-type=\u0022node\u0022 data-entity-substitution=\u0022canonical\u0022 title=\u0022Specialists in out-of-hospital settings\u0022\u003EWhittington respiratory service\u003C/a\u003E\u003C/li\u003E\n\t\u003Cli\u003E\u003Ca href=\u0022/projects/integrated-care-collaborative-programme-four-communities\u0022 data-entity-uuid=\u00225be4ca2e-846a-462d-91ab-1f5f94e6d8c3\u0022 data-entity-type=\u0022node\u0022 data-entity-substitution=\u0022canonical\u0022 title=\u0022Integrated care collaborative programme for four communities\u0022\u003EWigan\u003C/a\u003E\u003C/li\u003E\n\t\u003Cli\u003E\u003Ca href=\u0022/publications/acute-hospitals-and-integrated-care\u0022 data-entity-uuid=\u0022d4ca3d63-200a-4a8c-8020-14745f46e7f5\u0022 data-entity-type=\u0022node\u0022 data-entity-substitution=\u0022canonical\u0022 title=\u0022Acute hospitals and integrated care\u0022\u003EYeovil District Hospital NHS Foundation Trust\u003C/a\u003E\u003C/li\u003E\n\u003C/ul\u003E\u003Ch3\u003EEurope\u003C/h3\u003E\n\n\u003Cul\u003E\u003Cli\u003E\u003Ca href=\u0022/publications/providing-integrated-care-older-people-complex-needs\u0022 data-entity-uuid=\u00228a7aa010-2dd9-43ea-8c0f-d26006ee594b\u0022 data-entity-type=\u0022node\u0022 data-entity-substitution=\u0022canonical\u0022 title=\u0022Providing integrated care for older people with complex needs\u0022\u003EGeriant, Noord-Holland province, the Netherlands\u003C/a\u003E\u003C/li\u003E\n\t\u003Cli\u003E\u003Ca href=\u0022/publications/population-health-systems\u0022 data-entity-uuid=\u0022a4eceeb1-a607-4277-9fba-724600cc46a1\u0022 data-entity-type=\u0022node\u0022 data-entity-substitution=\u0022canonical\u0022 title=\u0022Population health systems\u0022\u003EGesundes Kinzigtal, Germany\u003C/a\u003E\u003C/li\u003E\n\t\u003Cli\u003E\u003Ca href=\u0022/publications/population-health-systems\u0022 data-entity-uuid=\u0022a4eceeb1-a607-4277-9fba-724600cc46a1\u0022 data-entity-type=\u0022node\u0022 data-entity-substitution=\u0022canonical\u0022 title=\u0022Population health systems\u0022\u003EJ\u00f6nk\u00f6ping County Council, Sweden\u003C/a\u003E\u003C/li\u003E\n\t\u003Cli\u003E\u003Ca href=\u0022/publications/providing-integrated-care-older-people-complex-needs\u0022 data-entity-uuid=\u00228a7aa010-2dd9-43ea-8c0f-d26006ee594b\u0022 data-entity-type=\u0022node\u0022 data-entity-substitution=\u0022canonical\u0022 title=\u0022Providing integrated care for older people with complex needs\u0022\u003ENorrtalje, Sweden\u003C/a\u003E\u003C/li\u003E\n\u003C/ul\u003E\u003Ch3\u003ERest of the world\u003C/h3\u003E\n\n\u003Cul\u003E\u003Cli\u003E\u003Ca href=\u0022/publications/quest-integrated-health-and-social-care\u0022 data-entity-uuid=\u002203010ca6-034b-419e-815e-2998e112a202\u0022 data-entity-type=\u0022node\u0022 data-entity-substitution=\u0022canonical\u0022 title=\u0022The quest for integrated health and social care\u0022\u003ECanterbury District Health Board, New Zealand\u003C/a\u003E\u003C/li\u003E\n\t\u003Cli\u003E\u003Ca href=\u0022/publications/population-health-systems\u0022 data-entity-uuid=\u0022a4eceeb1-a607-4277-9fba-724600cc46a1\u0022 data-entity-type=\u0022node\u0022 data-entity-substitution=\u0022canonical\u0022 title=\u0022Population health systems\u0022\u003ECounties Manukau, New Zealand\u003C/a\u003E\u003C/li\u003E\n\t\u003Cli\u003E\u003Ca href=\u0022/publications/providing-integrated-care-older-people-complex-needs\u0022 data-entity-uuid=\u00228a7aa010-2dd9-43ea-8c0f-d26006ee594b\u0022 data-entity-type=\u0022node\u0022 data-entity-substitution=\u0022canonical\u0022 title=\u0022Providing integrated care for older people with complex needs\u0022\u003EHealthOne Mount Druitt, Sydney, Australia\u003C/a\u003E\u003C/li\u003E\n\t\u003Cli\u003E\u003Ca href=\u0022/audio-video/dr-michael-montalto-hospital-home-victoria-australia\u0022 data-entity-uuid=\u0022cb19cea9-7659-4423-abef-a4fa4e0b7b82\u0022 data-entity-type=\u0022node\u0022 data-entity-substitution=\u0022canonical\u0022 title=\u0022Dr Michael Montalto: Hospital in the Home\u0022\u003EHospital in the Home, Victoria, Australia\u003C/a\u003E\u003C/li\u003E\n\t\u003Cli\u003E\u003Ca href=\u0022/publications/population-health-systems\u0022 data-entity-uuid=\u0022a4eceeb1-a607-4277-9fba-724600cc46a1\u0022 data-entity-type=\u0022node\u0022 data-entity-substitution=\u0022canonical\u0022 title=\u0022Population health systems\u0022\u003EKaiser Permanente, California, the United States\u003C/a\u003E\u003C/li\u003E\n\t\u003Cli\u003E\u003Ca href=\u0022/publications/providing-integrated-care-older-people-complex-needs\u0022 data-entity-uuid=\u00228a7aa010-2dd9-43ea-8c0f-d26006ee594b\u0022 data-entity-type=\u0022node\u0022 data-entity-substitution=\u0022canonical\u0022 title=\u0022Providing integrated care for older people with complex needs\u0022\u003EProgramme of Research to Integrate the Services for the Maintenance of Autonomy (PRISMA), Quebec, Canada\u003C/a\u003E\u003C/li\u003E\n\t\u003Cli\u003E\u003Ca href=\u0022/publications/population-health-systems\u0022 data-entity-uuid=\u0022a4eceeb1-a607-4277-9fba-724600cc46a1\u0022 data-entity-type=\u0022node\u0022 data-entity-substitution=\u0022canonical\u0022 title=\u0022Population health systems\u0022\u003ESouthcentral Foundation, Alaska\u003C/a\u003E\u003C/li\u003E\n\t\u003Cli\u003E\u003Ca href=\u0022/publications/providing-integrated-care-older-people-complex-needs\u0022 data-entity-uuid=\u00228a7aa010-2dd9-43ea-8c0f-d26006ee594b\u0022 data-entity-type=\u0022node\u0022 data-entity-substitution=\u0022canonical\u0022 title=\u0022Providing integrated care for older people with complex needs\u0022\u003ETe Whiringa Ora, Eastern Bay of Plenty, New Zealand\u003C/a\u003E\u003C/li\u003E\n\t\u003Cli\u003E\u003Ca href=\u0022/publications/providing-integrated-care-older-people-complex-needs\u0022 data-entity-uuid=\u00228a7aa010-2dd9-43ea-8c0f-d26006ee594b\u0022 data-entity-type=\u0022node\u0022 data-entity-substitution=\u0022canonical\u0022 title=\u0022Providing integrated care for older people with complex needs\u0022\u003EThe Massachusetts General Care Management Programme, Boston, the United States\u003C/a\u003E\u003C/li\u003E\n\t\u003Cli\u003E\u003Ca href=\u0022/audio-video/kenneth-kizer-achieving-integrated-care-full-presentation\u0022 data-entity-uuid=\u0022d830f75b-8bf1-4a29-95f5-018da7017a0f\u0022 data-entity-type=\u0022node\u0022 data-entity-substitution=\u0022canonical\u0022 title=\u0022Kenneth Kizer: achieving integrated care - full presentation\u0022\u003EVeterans Health Administration, the United States\u003C/a\u003E\u003C/li\u003E\n\u003C/ul\u003E"
+                },
+                "field_title": "Integrated care case studies"
+            },
+            "relationships": {
+                "slice_type": {
+                    "data": {
+                        "type": "slice_type--slice_type",
+                        "id": "2ae9f9d3-302c-4660-a161-1312a9d8fe72",
+                        "meta": { "drupal_internal__target_id": "content" }
+                    },
+                    "links": {
+                        "related": {
+                            "href": "http://localhost:8080/jsonapi/slice/content/6f232ada-64be-45ad-a81d-a0865d75a68b/slice_type?resourceVersion=id%3A454181"
+                        },
+                        "self": {
+                            "href": "http://localhost:8080/jsonapi/slice/content/6f232ada-64be-45ad-a81d-a0865d75a68b/relationships/slice_type?resourceVersion=id%3A454181"
+                        }
+                    }
+                },
+                "user_id": {
+                    "data": {
+                        "type": "user--user",
+                        "id": "ae8b13e2-44ad-42b9-8779-542f8e0fc12d",
+                        "meta": { "drupal_internal__target_id": 0 }
+                    },
+                    "links": {
+                        "related": {
+                            "href": "http://localhost:8080/jsonapi/slice/content/6f232ada-64be-45ad-a81d-a0865d75a68b/user_id?resourceVersion=id%3A454181"
+                        },
+                        "self": {
+                            "href": "http://localhost:8080/jsonapi/slice/content/6f232ada-64be-45ad-a81d-a0865d75a68b/relationships/user_id?resourceVersion=id%3A454181"
+                        }
+                    }
+                },
+                "revision_uid": {
+                    "data": {
+                        "type": "user--user",
+                        "id": "ae8b13e2-44ad-42b9-8779-542f8e0fc12d",
+                        "meta": { "drupal_internal__target_id": 0 }
+                    },
+                    "links": {
+                        "related": {
+                            "href": "http://localhost:8080/jsonapi/slice/content/6f232ada-64be-45ad-a81d-a0865d75a68b/revision_uid?resourceVersion=id%3A454181"
+                        },
+                        "self": {
+                            "href": "http://localhost:8080/jsonapi/slice/content/6f232ada-64be-45ad-a81d-a0865d75a68b/relationships/revision_uid?resourceVersion=id%3A454181"
+                        }
+                    }
+                }
+            }
+        }
+    ],
+    "meta": { "count": 2 },
+    "links": {
+        "self": {
+            "href": "http://localhost:8080/jsonapi/node/page?filter%5Bfield_multimedia_type.meta.drupal_internal__target_id%5D%5Bvalue%5D=8193\u0026include=field_slices"
+        }
+    }
+}

@@ -5,12 +5,15 @@ const { UploadFileToStoryblok } = require('../lib/assetUpload');
 const { convertHtmlToJson } = require('../lib/convertHtmlToJson')
 const { calculateReadingTime, createSlug } = require('../helpers/general')
 const { delay } = require('../lib/delay');
-const { getNewStoryIDFromOldID } = require('../lib/getStoryIdfromOldId');
+const { getNewStoryIDFromOldID, getStoryWithMigrationID } = require('../lib/getStoryIdfromOldId');
 const processedTopics = require('../data/processed/processed-topics.json')
+const {processedTopics:mappingTopics} = require('../lib/topicsMap')
 const { internalId: staffs } = require('../data/processed/processed-staff.json');
 const config = require('../config');
+const nodeAlias = require('../data/processed/processed-node-alias.json')
 
 const publicationsFolderPath = '../data/raw/publications'
+const publicationType = require('../lib/publicationType')
 
 async function process({ data: publications, included }) {
 
@@ -21,7 +24,7 @@ async function process({ data: publications, included }) {
 
         for (let publication of reversedPublications) {
             i++;
-            if (i > 4) {
+            if (i > 1) {
                 // process.exit(0);
                 break;
             }
@@ -32,7 +35,22 @@ async function process({ data: publications, included }) {
                 continue;
             }
 
-            const existing = await getNewStoryIDFromOldID({ fullSlug: `development/${data?.story?.content?.component}/${data?.story?.slug}`, id: data?.story?.content?.id, getUUID: false })
+            const type = data?.story?.content?.category[0]
+
+            if (!type) {
+                console.log(`skipped for ${data.story.name}`)
+                continue
+            }
+
+
+            if (type) {
+
+                if(!config.component.publications.slug_directories[type]){
+                    console.log(`Skipping... config value not found for ${type}`)
+                    continue
+                }
+
+                const existing = await getStoryWithMigrationID({ folder: 'insight-and-analysis', id: data?.story?.content?.migration_id, getUUID: false })
                 .catch(error => {
                     if (error.status === 404) {
                         return undefined;
@@ -41,31 +59,36 @@ async function process({ data: publications, included }) {
                     throw new CustomError(error.message, error?.status, error?.response)
                 })
 
-            // console.log(JSON.stringify(data));
-            // continue;
 
-            console.log("uploading ", data.story.name, "...")
 
-            // Uploading the assets to StoryBlok for using it in story
 
-            // console.log("uploading asset for ", data.story.name)
-            // const id = await getNewStoryIDFromOldID({startsWith:'development/insight-and-analysis', id:98000891});
-            // const featureImage = await UploadFileToStoryblok('https://reasondigital.com/wp-content/uploads/2020/11/glasses-on-blue-2-1.svg');
+                // console.log(JSON.stringify(data));
+                // continue;
 
-            // data.story.content.featured_image = {
-            //     ...featureImage,
-            //     "alt": ""
-            // }
+                console.log("uploading ", data.story.name, "...")
 
-            const response = await addToStoryblok(data, existing);
+                // Uploading the assets to StoryBlok for using it in story
 
-            await delay(500)
+                // console.log("uploading asset for ", data.story.name)
+                // const id = await getNewStoryIDFromOldID({startsWith:'development/insight-and-analysis', id:98000891});
+                // const featureImage = await UploadFileToStoryblok('https://reasondigital.com/wp-content/uploads/2020/11/glasses-on-blue-2-1.svg');
 
-            const jsonResponse = await response.json();
+                // data.story.content.featured_image = {
+                //     ...featureImage,
+                //     "alt": ""
+                // }
 
-            if (response.status !== 200 && response.status !== 201) {
-                errors.push(jsonResponse)
+                const response = await addToStoryblok(data, existing);
+
+                await delay(500)
+
+                const jsonResponse = await response.json();
+
+                if (response.status !== 200 && response.status !== 201) {
+                    errors.push(jsonResponse)
+                }
             }
+
 
         }
 
@@ -98,21 +121,39 @@ const getPopulatedData = async ({ attributes, relationships }, included) => {
         field_summary,
         field_author_name,
         field_subtitle,
-        field_download_link_text
+        field_download_link_text,
+        field_download_summary_link_text,
+        field_meta_tags,
+        path
     } = attributes
+
+    const slug = path?.alias.split('/')
+    const slugAlias = slug.reverse()[0]
+    console.log(slugAlias)
 
 
     // 337912
-    const { field_health_topics, field_author, field_download, field_download_summary } = relationships
-
-    if(field_download_summary.data) {
-        console.log("field_download_summary", field_download_summary.data)
-    }
+    const { 
+        field_health_topics,
+        field_author,
+        field_download,
+        field_download_summary,
+        field_report_type 
+    } = relationships
 
     let document = [];
 
+    const {drupal_internal__target_id:publicationTypeId} = field_report_type?.data?.meta
+    
+    if(!publicationType[publicationTypeId]){
+        console.log("publicationType not found", title)
+        return false
+    }
+
+    const category = publicationType[publicationTypeId] ? publicationType[publicationTypeId].category : 'Publication'
+
     if(field_download?.data){
-        const {id} = field_download?.data
+        const { id } = field_download?.data
         if(id){
             const files = included?.filter(postIncludes => id==postIncludes.id)
             for (let fileEntry of files){
@@ -120,19 +161,18 @@ const getPopulatedData = async ({ attributes, relationships }, included) => {
                 const changedDate = new Date(changed)
                 const formattedDate = `${changedDate.getFullYear()}-${changedDate.getMonth()>10 ? changedDate.getMonth()+1 : '0'+(changedDate.getMonth()+1)}`
                 const fileURL = `https://www.kingsfund.org.uk/sites/default/files/${formattedDate}/${name}`
-                console.log(fileURL)
                 const checkFile = await fetch(fileURL)
                 if(checkFile.status==404){
                     continue
                 }
                 const uploadfile = await UploadFileToStoryblok(fileURL, config.assets.publication)
                 const pattern = /\((.*?)\)/;
-                const matches = field_download_link_text.match(pattern)
+                const matches = field_download_link_text?.match(pattern)
 
-                let title = field_download_link_text,
+                let title = field_download_link_text || 'File',
                 fileType = name.split('.').pop() || 'PDF';
                 
-                if(matches.length>0) {
+                if(matches?.length>0) {
                     title = title.replace(matches[0],'')
                     fileType = matches[1] || fileType
                 }
@@ -152,9 +192,103 @@ const getPopulatedData = async ({ attributes, relationships }, included) => {
         }
     
     }
+    
+    // need to do &include=field_download_summary while getting data
+    if(field_download_summary?.data){
+        const { id } = field_download_summary.data
+        if(id){
+            const files = included?.filter(postIncludes => id==postIncludes.id)
+            for (let fileEntry of files){
+                const {attributes:{name, path, changed}, relationships} = fileEntry
+                const changedDate = new Date(changed)
+                const formattedDate = `${changedDate.getFullYear()}-${changedDate.getMonth()>10 ? changedDate.getMonth()+1 : '0'+(changedDate.getMonth()+1)}`
+                const fileURL = `https://www.kingsfund.org.uk/sites/default/files/${formattedDate}/${name}`
+                const checkFile = await fetch(fileURL)
+                if(checkFile.status==404){
+                    console.log("file doesn't exists", fileURL)
+                    continue
+                }
+                const uploadfile = await UploadFileToStoryblok(fileURL, config.assets.publication)
+                const pattern = /\((.*?)\)/;
+                const matches = field_download_summary_link_text?.match(pattern)
+
+                let title = field_download_summary_link_text || 'File',
+                fileType = name.split('.').pop() || 'PDF';
+                
+                if(matches?.length>0) {
+                    title = title.replace(matches[0],'')
+                    fileType = matches[1] || fileType
+                }
+
+                document.push({
+                    component: "downloads",
+                    downloads: [
+                        {
+                            title: title,
+                            component: "download_item",
+                            file_type: fileType,
+                            file: {...uploadfile}
+                        }
+                    ]
+                })
+            }
+        }
+    
+    }
+
+    const {
+        title: metaTitle,
+        description: metaDescription,
+        twitter_cards_type,
+        og_image_url,
+        og_title
+    } = field_meta_tags || {}
+
+    const SEO = {
+        "title": `${title} | The King's Fund`,
+        "og_image": "",
+        "og_title": title,
+        "description": metaDescription || field_summary,
+        "twitter_image": "",
+        "twitter_title": title,
+        "og_description": field_summary,
+        "twitter_description": field_summary
+    }
+
+    if (metaTitle) {
+        SEO.title = metaTitle.replace(/\[node:title\]/g, title)
+            .replace(/\[site:name\]/, "The King's Fund")
+    }
+
+    if (metaDescription) {
+        SEO.description = metaDescription
+    } else {
+        SEO.description = field_summary
+    }
+
+    if (og_image_url) {
+        SEO.og_image = og_image_url.replace(/\[site:url\]/g, 'https://www.kingsfund.org.uk')
+        const imageExistenceCheck = await fetch(SEO.og_image)
+        if(!imageExistenceCheck.status === 404) {
+            const upload = await UploadFileToStoryblok(SEO.og_image)
+            SEO.og_image = upload.filename
+        }
+    }
+
+    if (og_title) {
+        SEO.og_title = og_title.replace(/\[node:title\]/g, title)
+    }
+
     const topics = (field_health_topics?.data || []).map(({ id, meta }) => {
         const { drupal_internal__target_id: target_id } = meta
-        return processedTopics[target_id]?.title[0]?.value
+        const topicValue = processedTopics[target_id]?.title[0]?.value
+        if(!topicValue){
+            return undefined
+        }
+        if (mappingTopics.hasOwnProperty(topicValue.toLowerCase())) {
+            return mappingTopics[topicValue.toLowerCase()]
+        }
+        return topicValue
     }).filter(topicValue => !!topicValue)
 
     let staffDetails, guestAuthor = [], postAuthor = []
@@ -166,7 +300,7 @@ const getPopulatedData = async ({ attributes, relationships }, included) => {
             const internalId = author.meta.drupal_internal__target_id
 
             staffDetails = staffs[internalId]
-            const newAuthor = await getNewStoryIDFromOldID({ fullSlug: `development/staff/${createSlug(staffDetails.title)}`, getAll: true })
+            const newAuthor = await getNewStoryIDFromOldID({ fullSlug: `${config.environment}/${config.component.staff.slug_directory}/${createSlug(staffDetails.title)}`, getAll: true })
                 .catch(error => {
                     console.log("author fetch error", error)
                     return false;
@@ -192,12 +326,13 @@ const getPopulatedData = async ({ attributes, relationships }, included) => {
 
     if (field_author_name) {
         guestAuthor = field_author_name.map(author => {
-            if (!author.value) {
+            
+            if (!author) {
                 return
             }
 
             return {
-                "name": author.value,
+                "name": author,
                 "component": "guest_author",
             }
         }).filter(author => !!author)
@@ -215,23 +350,45 @@ const getPopulatedData = async ({ attributes, relationships }, included) => {
             const { field_title, field_text_content, field_link } = attributes
 
             if (type == 'slice--cta_banner') {
+
+                const button = []
+                if(field_link?.uri) {
+                    
+                    let ctaUrl = field_link?.uri
+                    if (!field_link.uri.match(/https?:\/\//)) {
+                        const entity = field_link.uri.split(':')
+                        const alias = `https://www.kingsfund.org.uk${nodeAlias[`/${entity[1]}`]}`
+                        console.log("alias", alias)
+                        ctaUrl = alias
+                    } else {
+                        if (field_link.uri.includes('http')) {
+                            ctaUrl = field_link.uri
+                        } else {
+                            console.log("didn't match", field_link.uri.match(/https?:\/\//))
+                        }
+                    }
+
+                    button.push(
+                        {
+                            link: {
+                                "url": ctaUrl,
+                                "target": "_blank",
+                                "linktype": "url",
+                                "fieldtype": "multilink",
+                                cached_url: ctaUrl
+                            },
+                            label: field_link?.title,
+                            "component": "button"
+                        }
+                    )
+                }
+
                 return {
                     "component": "cta_banner",
                     "title": field_title,
                     // "description": convertHtmlToJson(field_text_content.value),
                     "description": field_text_content?.processed?.replace(/<[^>]*>/g, ''),
-                    "button": [
-                        {
-                            link: {
-                                "url": field_link?.uri,
-                                "target": "_blank",
-                                "linktype": "url",
-                                "fieldtype": "multilink",
-                            },
-                            label: field_link?.title,
-                            "component": "button"
-                        }
-                    ]
+                    "button": [...button]
                 }
             } else if (field_text_content) {
 
@@ -247,6 +404,7 @@ const getPopulatedData = async ({ attributes, relationships }, included) => {
         }).filter(content => !!content)
     }
 
+    const createDateObject = typeof created === "string" ? new Date(created) : new Date(created * 1000)
     const preparedData = {
         publish: '1',
         "story": {
@@ -254,6 +412,8 @@ const getPopulatedData = async ({ attributes, relationships }, included) => {
             "content": {
                 // "id": uuid[0]?.value,
                 "topic": topics,
+                "migration_id": drupal_internal__nid,
+                "backlog": (new Date().getFullYear() - createDateObject.getFullYear()) > 5,
                 "content": [
                     {
                         "component": "rich_text",
@@ -265,9 +425,20 @@ const getPopulatedData = async ({ attributes, relationships }, included) => {
 
                     ...storySlices
                 ],
+                seo: [
+                    {
+                        "fields": {
+                            ...SEO,
+                            "plugin":"seo_metatags",
+                        },
+                        "noindex": false,
+                        "nofollow": false,
+                        "component": "seo",
+                    }
+                ],
                 "summary": field_summary,
                 "category": [
-                    "Publication"
+                    category
                 ],
                 "component": "insight-and-analysis",
                 "commissioned": false,
@@ -278,12 +449,12 @@ const getPopulatedData = async ({ attributes, relationships }, included) => {
                 "introduction_text": field_subtitle,
                 "introduction_style": "standard"
             },
-            "slug": createSlug(title),
+            "slug": slugAlias || createSlug(title),
             // "tag_list": [
             // seems to have been removed
             // ],
             "is_startpage": false,
-            "parent_id": 393424686, // id of a folder
+            "parent_id": publicationType[publicationTypeId].folderId, // id of a folder
             "meta_data": {
                 "title": title
             }
@@ -299,14 +470,15 @@ const getPopulatedData = async ({ attributes, relationships }, included) => {
     }
 
     if (guestAuthor.length > 0) {
-        if (preparedData.story.content.authors) {
-            preparedData.story.content.authors = [...preparedData.story.content.authors, ...guestAuthor]
+        if (postAuthor.length > 0) {
+            preparedData.story.content.authors = [...postAuthor, ...guestAuthor]
+        }else {
+            preparedData.story.content.authors = [...guestAuthor]
         }
-        preparedData.story.content.authors = [...guestAuthor]
     }
 
-    if(document) {
-        preparedData.story.content.content = [...preparedData.story.content.content, ...document]
+    if(document.length > 0) {
+        preparedData.story.content.content = [...document, ...preparedData.story.content.content]
     }
 
     // if (topics.length > 0) {
@@ -325,6 +497,7 @@ const getPopulatedData = async ({ attributes, relationships }, included) => {
 async function main() {
     const files = await fs.readdirSync(path.join(__dirname, publicationsFolderPath))
     for (const file of files) {
+        console.log(file)
         const data = await fs.readFileSync(path.join(__dirname, publicationsFolderPath, file), 'utf8')
         await process(JSON.parse(data))
     }

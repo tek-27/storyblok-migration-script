@@ -5,33 +5,39 @@ const { UploadFileToStoryblok } = require('../lib/assetUpload');
 const { convertHtmlToJson } = require('../lib/convertHtmlToJson')
 const { calculateReadingTime, createSlug } = require('../helpers/general')
 const { delay } = require('../lib/delay');
-const { getNewStoryIDFromOldID } = require('../lib/getStoryIdfromOldId');
+const { getNewStoryIDFromOldID, getStoryWithMigrationID } = require('../lib/getStoryIdfromOldId');
 const processedTopics = require('../data/processed/processed-topics.json')
 const { internalId: staffs } = require('../data/processed/processed-staff.json')
-
-const blogsRelatedData = require('../data/processed/processed-blogs.json')
+const { processedTopics: mappingTopics } = require('../lib/topicsMap')
 const blogsFolderPath = '../data/raw/blogs'
+const { parser, parseFootnoteAndMainBody, getParsedFootNotes, getFlourishData } = require('../lib/parser');
+const config = require('../config')
 
+let i = 0;
 async function process({ data: blogs, included }) {
 
     const errors = []
     try {
-        let i = 0;
         const reversedBlogs = [...blogs.reverse()]
         for (let blog of reversedBlogs) {
             i++;
-            if (i > 10) {
+            if (i > 3) {
                 // process.exit(0);
                 break;
             }
             const blogData = blog
+
+            // if (!(i > 24 && i < 30)) {
+            //     continue
+            // }
+
             const data = await getPopulatedData(blogData, included)
 
             if (!data) {
                 continue;
             }
 
-            const existing = await getNewStoryIDFromOldID({ fullSlug: `development/${data?.story?.content?.component}/${data?.story?.slug}`, id: data?.story?.content?.id, getUUID: false })
+            const existing = await getStoryWithMigrationID({ folder: 'insight-and-analysis', id: data?.story?.content?.migration_id, getUUID: false })
                 .catch(error => {
                     if (error.status === 404) {
                         return undefined;
@@ -95,21 +101,82 @@ const getPopulatedData = async ({ attributes, relationships }, included) => {
         field_comments,
         field_summary,
         field_author_name,
-        field_reading_time
+        field_reading_time,
+        field_meta_tags,
+        path
     } = attributes
 
+    const slug = path.alias.split('/')
+    const slugAlias = slug.reverse()[0]
+    console.log(slugAlias)
 
-    if (!blogsRelatedData[drupal_internal__nid]) {
-        console.log("drupal_internal__nid", drupal_internal__nid)
-        return
+    // if (!blogsRelatedData[drupal_internal__nid]) {
+    //     console.log("drupal_internal__nid", drupal_internal__nid)
+    //     return
+    // }
+
+    const { field_health_topics, field_author, field_social_sharing_image } = relationships
+
+
+    const {
+        title: metaTitle,
+        description: metaDescription,
+        twitter_cards_type,
+        og_image_url,
+        og_title
+    } = field_meta_tags || {}
+
+    const SEO = {
+        "title": `${title} | The King's Fund`,
+        "og_image": "",
+        "og_title": title,
+        "description": metaDescription || field_summary,
+        "twitter_image": "",
+        "twitter_title": title,
+        "og_description": field_summary,
+        "twitter_description": field_summary
     }
 
+    if (metaTitle) {
+        SEO.title = metaTitle.replace(/\[node:title\]/g, title)
+            .replace(/\[site:name\]/, "The King's Fund")
+    }
 
-    const { field_health_topics, field_author } = relationships
+    if (metaDescription) {
+        SEO.description = metaDescription
+    } else {
+        SEO.description = field_summary
+    }
+
+    if (og_image_url) {
+        SEO.og_image = og_image_url.replace(/\[site:url\]/g, 'https://www.kingsfund.org.uk')
+        const imageExistenceCheck = await fetch(SEO.og_image)
+        if (!imageExistenceCheck.status === 404) {
+            const upload = await UploadFileToStoryblok(SEO.og_image)
+            SEO.og_image = upload.filename
+            SEO.twitter_image = upload.filename
+        }
+    } else if (field_social_sharing_image.data) {
+
+    }
+
+    if (!og_image_url || !field_social_sharing_image) {
+        const defaultImage = await UploadFileToStoryblok('https://www.kingsfund.org.uk/sites/default/files/2017-08/TKF-twitter-card.png')
+        SEO.twitter_image = defaultImage.filename
+        SEO.og_image = defaultImage.filename
+    }
+
+    if (og_title) {
+        SEO.og_title = og_title.replace(/\[node:title\]/g, title)
+    }
 
     const topics = (field_health_topics?.data || []).map(({ id, meta }) => {
         const { drupal_internal__target_id: target_id } = meta
-        return processedTopics[target_id]?.title[0]?.value
+        const topicValue = processedTopics[target_id]?.title[0]?.value
+        if (mappingTopics.hasOwnProperty(topicValue.toLowerCase())) {
+            return mappingTopics[topicValue.toLowerCase()]
+        }
+        return topicValue
     }).filter(topicValue => !!topicValue)
 
     let staffDetails, guestAuthor = [], postAuthor = []
@@ -121,7 +188,7 @@ const getPopulatedData = async ({ attributes, relationships }, included) => {
             const internalId = author.meta.drupal_internal__target_id
 
             staffDetails = staffs[internalId]
-            const newAuthor = await getNewStoryIDFromOldID({ fullSlug: `development/staff/${createSlug(staffDetails.title)}`, getAll: true })
+            const newAuthor = await getNewStoryIDFromOldID({ fullSlug: `${config.environment}/${config.component.staff.slug_directory}/${createSlug(staffDetails?.title)}`, getAll: true })
                 .catch(error => {
                     console.log("author fetch error", error)
                     return false;
@@ -164,60 +231,242 @@ const getPopulatedData = async ({ attributes, relationships }, included) => {
 
     let storySlices = []
     if (pageSlicesData.length > 0) {
-        storySlices = pageSlicesData.map(slice => {
+        storySlices = pageSlicesData.flatMap(slice => {
             const { type, id, attributes, relationships } = slice
             const { field_title, field_text_content, field_link } = attributes
 
             if (type == 'slice--cta_banner') {
+
+                // return {
+                //     "component": "cta_banner",
+                //     "title": field_title,
+                //     // "description": convertHtmlToJson(field_text_content.value),
+                //     "description": field_text_content?.processed?.replace(/<[^>]*>/g, ''),
+                //     "button": [
+                //         {
+                //             link: {
+                //                 "url": field_link?.uri,
+                //                 "target": "_blank",
+                //                 "linktype": "url",
+                //                 "fieldtype": "multilink",
+                //             },
+                //             label: field_link?.title,
+                //             "component": "button"
+                //         }
+                //     ]
+                // }
+
                 return {
-                    "component": "cta_banner",
+                    "post": {
+                        "url": field_link?.uri,
+                        "linktype": "url",
+                        "fieldtype": "multilink",
+                        "cached_url": field_link?.uri
+                    },
+                    // "image":{},
                     "title": field_title,
-                    // "description": convertHtmlToJson(field_text_content.value),
                     "description": field_text_content?.processed?.replace(/<[^>]*>/g, ''),
-                    "button": [
-                        {
-                            link: {
-                                "url": field_link?.uri,
-                                "target": "_blank",
-                                "linktype": "url",
-                                "fieldtype": "multilink",
-                            },
-                            label: field_link?.title,
-                            "component": "button"
-                        }
-                    ]
+                    "alignment": "right",
+                    "component": "cta_signpost",
+                    "button_link": {
+                        "url": field_link?.uri,
+                        "linktype": "url",
+                        "fieldtype": "multilink",
+                        "cached_url": field_link?.uri
+                    },
+                    "button_text": "",
                 }
+
             } else if (field_text_content) {
 
-                return {
-                    "component": "rich_text",
-                    "text": convertHtmlToJson(field_text_content.processed ? `<h3>${field_title ? field_title : ''}</h3>` + field_text_content.processed : ''),
-                    "footnotes": [
+                if (field_text_content.processed.indexOf("flourish-embed")) {
+                    const contents = []
+                    const { before, flourishHtml, after } = getFlourishData(field_text_content.processed)
 
-                    ],
+                    if (before?.length > 10) {
+
+                        const { mainBody, footNotes } = parseFootnoteAndMainBody(before)
+
+                        const content = {
+                            "component": "rich_text",
+                            "text": convertHtmlToJson(mainBody),
+                        }
+
+                        if (field_title) {
+                            content.text = convertHtmlToJson(`<h3>${field_title ? field_title : ''}</h3>` + mainBody)
+                        }
+
+                        if (footNotes) {
+                            const parsedFootNotes = getParsedFootNotes(footNotes)
+                            const formattedFootNotes =
+                                parsedFootNotes.map((footnote, index) => {
+                                    return {
+                                        "component": "footnote",
+                                        "link_reference": {
+                                            "id": "",
+                                            "url": "",
+                                            "linktype": "story",
+                                            "fieldtype": "multilink",
+                                            "cached_url": ""
+                                        },
+                                        "text_reference": footnote,
+                                        "number_reference": index + 1
+                                    }
+                                }
+                                )
+                            content.footnotes = formattedFootNotes
+                        }
+
+                        contents.push(content)
+
+                    }
+
+                    if (flourishHtml?.length > 10) {
+                        const flourishData = {
+                            "component": "flourish_visual",
+                            "embed": ""
+                        }
+
+                        if (!before && !after) {
+                            flourishData.embed = `<h2>${field_title ? field_title : ''}</h2>` + flourishHtml
+                        } else {
+                            flourishData.embed = flourishHtml
+                        }
+
+                        contents.push(flourishData)
+                    }
+
+                    if (after?.length > 10) {
+
+                        const { mainBody, footNotes } = parseFootnoteAndMainBody(after)
+
+                        const content = {
+                            "component": "rich_text",
+                            "text": convertHtmlToJson(mainBody),
+                        }
+
+                        if (field_title && !before) {
+                            content.text = convertHtmlToJson(`<h3>${field_title ? field_title : ''}</h3>` + mainBody)
+                        }
+
+                        if (footNotes) {
+                            const parsedFootNotes = getParsedFootNotes(footNotes)
+                            const formattedFootNotes =
+                                parsedFootNotes.map((footnote, index) => {
+                                    return {
+                                        "component": "footnote",
+                                        "link_reference": {
+                                            "id": "",
+                                            "url": "",
+                                            "linktype": "story",
+                                            "fieldtype": "multilink",
+                                            "cached_url": ""
+                                        },
+                                        "text_reference": footnote.footnoteValue,
+                                        "number_reference": footnote.label || (index + 1)
+                                    }
+                                }
+                                )
+                            content.footnotes = formattedFootNotes
+                        }
+
+                        contents.push(content)
+                    }
+
+                    return contents
                 }
+
+                const { mainBody, footNotes } = parseFootnoteAndMainBody(field_text_content.processed)
+
+                const content = {
+                    "component": "rich_text",
+                    "text": convertHtmlToJson(mainBody ? `<h3>${field_title ? field_title : ''}</h3>` + mainBody : ''),
+                }
+
+                if (footNotes) {
+                    const parsedFootNotes = getParsedFootNotes(footNotes)
+                    const formattedFootNotes =
+                        parsedFootNotes.map((footnote, index) => {
+                            return {
+                                "component": "footnote",
+                                "link_reference": {
+                                    "id": "",
+                                    "url": "",
+                                    "linktype": "story",
+                                    "fieldtype": "multilink",
+                                    "cached_url": ""
+                                },
+                                "text_reference": footnote,
+                                "number_reference": index + 1
+                            }
+                        }
+                        )
+                    content.footnotes = formattedFootNotes
+                }
+
+                return content
 
             }
         }).filter(content => !!content)
     }
+
+    const bodyContent = {
+        "component": "rich_text",
+    }
+
+    if (body?.processed) {
+
+        const { mainBody, footNotes } = parseFootnoteAndMainBody(body.processed)
+
+        bodyContent.text = convertHtmlToJson(mainBody)
+        if (footNotes) {
+            const parsedFootNotes = getParsedFootNotes(footNotes)
+            const formattedFootNotes =
+                parsedFootNotes.map((footnote) => {
+                    return {
+                        "component": "footnote",
+                        "link_reference": {
+                            "id": "",
+                            "url": "",
+                            "linktype": "story",
+                            "fieldtype": "multilink",
+                            "cached_url": ""
+                        },
+                        "text_reference": footnote.footnoteValue,
+                        "number_reference": footnote.label
+                    }
+                }
+                )
+
+            bodyContent.footnotes = formattedFootNotes
+        }
+
+    }
+
+    const createDateObject = typeof created === "string" ? new Date(created) : new Date(created * 1000)
 
     const preparedData = {
         publish: '1',
         "story": {
             "name": title || "",
             "content": {
-                // "id": uuid[0]?.value,
                 "topic": topics,
+                "migration_id": drupal_internal__nid,
+                "backlog": (new Date().getFullYear() - createDateObject.getFullYear()) > 5,
                 "content": [
-                    {
-                        "component": "rich_text",
-                        "text": convertHtmlToJson(body.processed),
-                        "footnotes": [
-
-                        ],
-                    },
-
+                    bodyContent,
                     ...storySlices
+                ],
+                seo: [
+                    {
+                        "fields": {
+                            ...SEO,
+                            "plugin": "seo_metatags",
+                        },
+                        "noindex": false,
+                        "nofollow": false,
+                        "component": "seo",
+                    }
                 ],
                 "summary": field_summary,
                 "category": [
@@ -225,18 +474,18 @@ const getPopulatedData = async ({ attributes, relationships }, included) => {
                 ],
                 "component": "insight-and-analysis",
                 "commissioned": false,
-                "review_date": new Date(changed).toISOString().split('T')[0],
-                "created_date": new Date(created).toISOString().split('T')[0],
-                "time_to_read": (field_reading_time || `${calculateReadingTime(body.value)}`) + '-min read',
+                "review_date": typeof changed === "string" ? changed.split('T')[0] : new Date(changed * 1000).toISOString().split('T')[0],
+                "created_date": typeof created === "string" ? created.split('T')[0] : new Date(created * 1000).toISOString().split('T')[0],
+                "time_to_read": field_reading_time,
                 "featured_image": null,
                 "introduction_text": field_summary,
                 "introduction_style": "standard"
             },
-            "slug": createSlug(title),
-            // "tag_list": [
-            // ],
+            "slug": slugAlias,
+            "tag_list": [
+            ],
             "is_startpage": false,
-            "parent_id": 393424686, // id of a folder
+            "parent_id": config.folders.blogs, // id of a folder
             "meta_data": {
                 "title": title
             }
@@ -253,14 +502,9 @@ const getPopulatedData = async ({ attributes, relationships }, included) => {
         preparedData.story.content.authors = [...preparedData.story.content.authors, ...guestAuthor]
     }
 
-    // if (topics.length > 0) {
-    //     preparedData.story.content.tag_list = [topics[0]]
-    //     console.log(preparedData.story.content.tag_list)
-    // }
-
-    // if(storySlices.length > 0) {
-    //     preparedData.story.content.content = { ...preparedData.story.content.content, ...storySlices }
-    // }
+    if (topics.length > 0) {
+        preparedData.story.tag_list = [topics[0]]
+    }
 
     return preparedData
 
@@ -268,7 +512,9 @@ const getPopulatedData = async ({ attributes, relationships }, included) => {
 
 async function main() {
     const files = await fs.readdirSync(path.join(__dirname, blogsFolderPath))
+    console.log(files.length)
     for (const file of files) {
+        console.log("Uploading File", file)
         const data = await fs.readFileSync(path.join(__dirname, blogsFolderPath, file), 'utf8')
         await process(JSON.parse(data))
     }
